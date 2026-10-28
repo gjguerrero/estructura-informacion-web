@@ -1,67 +1,66 @@
-# 3. Comercio electrónico
+# 19. El comercio electrónico como aplicación de un CMS
 
-## La tienda forma parte de un proceso
+## Contenido y operación comercial
 
-El comercio electrónico permite realizar operaciones comerciales mediante canales electrónicos. Una tienda online reúne información y funciones para presentar una oferta, recibir pedidos y gestionar la relación con el cliente.
+Una tienda online combina información que ayuda a decidir con funciones que permiten registrar y gestionar operaciones. El catálogo, las guías de talla y las condiciones de entrega forman parte de la experiencia, junto con carrito, pedido, pago y atención posterior.
 
-El proceso continúa después de pulsar «Comprar». Hay que comprobar el pedido, gestionar el cobro, preparar la mercancía, entregarla y atender posibles incidencias.
+Un CMS especializado aporta un modelo próximo al negocio. PrestaShop organiza funciones alrededor de catálogo, pedidos, clientes y otros procesos comerciales, como muestra su [guía de usuario](https://docs.prestashop-project.org/v.9-documentation/user-guide). La especialización no garantiza que la información esté completa ni que los procesos de la organización sean coherentes.
 
-> **Ejemplo.** Costa Sur puede tener una ficha de producto muy atractiva y, aun así, generar una mala experiencia si muestra existencias incorrectas o no informa del plazo de entrega.
+Este capítulo utiliza el comercio para aplicar conceptos de gestión de contenidos. No describe la instalación ni los pasos de una práctica con una tienda.
 
-## Quién vende y quién compra
+## Relaciones comerciales y necesidades de información
 
-| Relación | Significado | Ejemplo ficticio |
+En una relación **B2C**, una empresa vende a consumidores. En **B2B**, vende a otras empresas. En **C2C**, personas venden a otras personas, habitualmente a través de una plataforma. Estas categorías ayudan a identificar preguntas, pero no describen por sí solas todo el proceso.
+
+Una compradora individual puede necesitar saber ajuste, material y entrega. Un cliente empresarial puede requerir condiciones por volumen, referencias propias o documentación adicional. El catálogo y los permisos deben representar las necesidades del modelo real.
+
+Un marketplace incorpora varias partes y responsabilidades. No debe confundirse con una tienda donde una sola empresa controla toda la oferta. Publicar productos de terceros añade necesidades de validación, procedencia y coordinación.
+
+## El recorrido de compra
+
+| Momento | Pregunta de la persona | Contenido o dato necesario |
 | --- | --- | --- |
-| B2C | Una empresa vende a consumidores. | Costa Sur vende una camiseta a una persona. |
-| B2B | Una empresa vende a otra empresa. | Un proveedor vende cien camisetas a Costa Sur. |
-| C2C | Una persona vende a otra persona. | Alguien vende una prenda usada a través de una plataforma. |
+| Descubrimiento | ¿Qué ofrece esta tienda? | Identidad, propuesta y categorías comprensibles. |
+| Búsqueda | ¿Tiene lo que necesito? | Clasificación, filtros y disponibilidad. |
+| Evaluación | ¿Me sirve este producto? | Descripción, medidas, imágenes y variantes. |
+| Pedido | ¿Qué estoy solicitando y en qué condiciones? | Resumen coherente, cantidades, importes y entrega. |
+| Seguimiento | ¿Qué ha pasado con mi pedido? | Estado y comunicación verificable. |
+| Atención posterior | ¿Cómo resuelvo una duda o incidencia? | Canales y procedimientos claros. |
 
-Estas relaciones influyen en la información necesaria. Una compra entre empresas puede necesitar condiciones por volumen o referencias internas que una compra individual no requiere.
+La información debe aparecer cuando ayuda a decidir. Descubrir una condición decisiva al final puede obligar a rehacer todo el recorrido. El problema no siempre está en el botón de compra; puede estar en la calidad de las fichas.
 
-## Del descubrimiento a la atención posterior
+## Entidades que no conviene confundir
 
-1. **Descubrir.** La persona llega desde un buscador, una campaña, una recomendación o un enlace.
-2. **Encontrar.** Navega por categorías, utiliza filtros o escribe una búsqueda.
-3. **Evaluar.** Compara descripción, imágenes, talla, disponibilidad y condiciones.
-4. **Pedir.** Selecciona productos, revisa el carrito y facilita los datos necesarios.
-5. **Recibir y resolver.** Sigue el pedido y contacta si surge una incidencia.
+El **producto** identifica la oferta conceptual. La **variante** representa una opción concreta, como talla M y color azul. El **carrito** reúne una intención de compra todavía modificable. El **pedido** registra una operación según el proceso de la tienda. El **pago** y el **envío** tienen sus propios estados.
 
-Cada paso necesita información distinta. La organización del contenido debe acompañar ese recorrido.
+Un pedido creado no implica necesariamente pago confirmado. Un pago confirmado no implica envío realizado. El sistema necesita representar esas diferencias para comunicar correctamente al cliente y coordinar trabajo interno.
 
-## Qué facilita una decisión de compra
+Los estados editoriales también son distintos. «Ficha publicada» significa que se ofrece información; no demuestra que todas sus variantes estén disponibles o sean comprables. Un producto agotado puede conservar una ficha pública con información adecuada.
 
-### Información comprensible
+## Coherencia entre contenido y datos operativos
 
-El título identifica el producto. La descripción explica qué ofrece. Los datos permiten comparar. «Camiseta de algodón, talla M» ayuda más que «Producto fantástico, calidad superior» si la persona necesita saber qué está comprando.
+Costa Sur publica una descripción que promete una camiseta de algodón y muestra una imagen azul. Si la variante seleccionada corresponde a otro material o color, la información resulta contradictoria. Si el stock no se sincroniza, puede prometer disponibilidad que no existe.
 
-### Navegación y búsqueda
+El contenido editorial debe coordinarse con la fuente de precios, existencias y condiciones. Es necesario definir qué campos puede modificar cada rol y qué sistema tiene autoridad sobre cada dato.
 
-Las categorías organizan grupos amplios. Los filtros permiten afinar. El buscador permite expresar una necesidad con palabras propias. Los nombres deben resultar comprensibles para el público de la tienda.
+Una descripción comercial no debe introducir cifras que contradigan campos estructurados. Escribir un precio en un párrafo crea otra copia que quizá no cambie al actualizar la tarifa.
 
-### Condiciones visibles
+## Información histórica de la operación
 
-El cliente necesita comprender el precio mostrado, la disponibilidad y las condiciones de entrega. Si una información aparece demasiado tarde, puede obligarle a rehacer su decisión.
+La ficha actual de un producto puede cambiar. El registro de una operación necesita conservar los datos relevantes de su momento para poder interpretarla después. Mostrar el precio actual como si fuera el de un pedido pasado sería un error de modelado.
 
-### Uso desde distintos dispositivos
+La conservación afecta también a confirmaciones y condiciones asociadas. Las decisiones concretas sobre qué guardar y durante cuánto tiempo deben responder al proceso y a los requisitos aplicables. La idea fundamental es distinguir contenido vivo de evidencia de una operación.
 
-La ficha debe poder leerse y utilizarse en una pantalla pequeña. Un botón visible, un formulario comprensible y unas imágenes proporcionadas ayudan a completar la tarea.
+## Integraciones y responsabilidades
 
-### Rendimiento y accesibilidad
+La tienda puede comunicarse con inventario, pagos, logística y atención. Cada integración necesita tratar fallos y estados intermedios. Una confirmación de pago puede llegar después de que la persona cierre el navegador; el proceso no debería depender únicamente de lo que muestra una pantalla.
 
-Las imágenes deben aportar información sin un peso innecesario. Los textos alternativos, los títulos claros y los controles identificables facilitan el acceso al contenido. Una imagen con texto no debe ser la única forma de comunicar una condición importante.
+Desde la gestión de contenidos interesa saber qué mensajes se presentan en cada situación y qué información puede asegurar el sistema. «Pedido enviado» no debe utilizarse para un pedido que solo se ha recibido.
 
-## Medir con una pregunta concreta
+## Comprueba la comprensión
 
-No basta con acumular visitas. Debemos decidir qué queremos observar y definir cómo lo contamos.
+**¿Basta con añadir «Comprar» a una ficha para tener comercio electrónico?** No. Hay que definir operaciones, estados, datos y responsabilidades.
 
-Si de 200 sesiones se registran 8 compras, la conversión por sesión en ese ejemplo es **8 / 200 × 100 = 4 %**. El valor solo tiene sentido si sabemos qué se ha contado como sesión y como compra, durante qué periodo y con qué datos.
+**¿Un producto agotado debe eliminarse siempre?** No. Puede mantenerse informativo, indicar disponibilidad o dirigir a alternativas, según la política del catálogo.
 
-Que dos cambios coincidan no demuestra que uno cause al otro. Si la conversión aumenta después de cambiar una foto y lanzar una promoción, no podemos atribuir toda la mejora a la foto.
-
-### Para discutir
-
-Una campaña consigue muchas visitas a Costa Sur, pero pocas compras. Propón tres explicaciones distintas y qué información revisarías para distinguirlas.
-
-## Consulta para la práctica
-
-[Guía oficial de PrestaShop](https://docs.prestashop-project.org/v.9-documentation/user-guide). Los ejemplos y cifras de este capítulo son didácticos.
+**¿Por qué contenido y operación deben coordinarse?** Porque la decisión de compra depende de promesas e información que el proceso debe poder cumplir.

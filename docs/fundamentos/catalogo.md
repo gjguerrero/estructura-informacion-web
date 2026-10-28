@@ -1,58 +1,81 @@
-# 4. Organizar un catálogo
+# 20. Catálogo, productos, atributos y variantes
 
-## Una ficha es información estructurada
+## Un catálogo es un modelo de información
 
-Un producto no es solo una fotografía y un párrafo. Tiene datos con significados distintos, como nombre, referencia, precio, disponibilidad y características.
+Un catálogo organiza entidades comerciales para que puedan identificarse, describirse, compararse y mantenerse. No es únicamente una colección de fotografías. Su calidad depende de la estructura de datos, del vocabulario y del proceso editorial.
 
-Guardar cada dato en el campo adecuado permite mostrarlo, filtrarlo y actualizarlo con mayor coherencia. Si escribimos la talla únicamente dentro de una descripción, puede ser difícil utilizarla como filtro o gestionar sus existencias.
+Cada ficha debe resolver preguntas del público y conservar datos utilizables por el sistema. Una talla escondida en un párrafo puede leerse, pero no necesariamente funcionar como filtro ni relacionarse con existencias.
 
-## Categoría, característica y combinación
+Los conceptos de este capítulo pueden aparecer con nombres diferentes en otros productos. La [documentación de productos de PrestaShop](https://docs.prestashop-project.org/v.9-documentation/user-guide/selling/managing-catalog/managing-products) sirve como referencia de una implementación.
 
-| Elemento | Pregunta que responde | Ejemplo |
+## Producto, categoría, característica y atributo
+
+| Concepto | Función | Ejemplo de Costa Sur |
 | --- | --- | --- |
-| Categoría | ¿En qué grupo buscaría este producto? | Camisetas. |
-| Característica | ¿Qué propiedad describe el producto? | Composición: algodón. |
-| Combinación | ¿Qué variante concreta se puede comprar? | Talla M, color azul. |
-| Referencia | ¿Cómo identificamos esta unidad o variante en la gestión? | CS-CAM-AZ-M. |
+| Producto | Oferta que comparte identidad y descripción general. | Camiseta Bahía. |
+| Categoría | Grupo para organizar y encontrar. | Camisetas. |
+| Característica | Propiedad descriptiva del producto. | Composición: algodón. |
+| Atributo de variante | Dimensión cuyas opciones diferencian variantes. | Talla o color. |
+| Variante o combinación | Opción concreta que puede gestionarse. | Camiseta Bahía azul, talla M. |
+| SKU o referencia interna | Identificación de una unidad de gestión comercial. | CS-BAH-AZ-M. |
 
-La misma idea puede representarse de distintas formas según el negocio. Hay que mantener un criterio coherente y comprobar cómo lo admite el sistema.
+En PrestaShop, los [atributos permiten definir combinaciones](https://docs.prestashop-project.org/v.9-documentation/user-guide/selling/managing-catalog/managing-product-attributes). Una propiedad no es «característica» o «atributo» por naturaleza: depende de cómo diferencie los artículos que se ofrecen. Si el material cambia entre opciones comprables, el modelo debe tratar esa diferencia.
 
-## Diseñar las categorías
+## Variantes y explosión de combinaciones
 
-Una clasificación útil agrupa productos de una manera que el cliente entiende. No hace falta reproducir en la tienda los departamentos internos de la empresa.
+Tres tallas y dos colores permiten hasta **3 × 2 = 6 combinaciones** si todas las parejas existen. Añadir cuatro acabados produciría hasta 24. El catálogo no debe crear automáticamente combinaciones que el negocio no ofrece.
 
-Para Costa Sur, una primera estructura podría ser **Camisetas**, **Bolsas** y **Accesorios**. Añadir demasiados niveles a un catálogo pequeño obliga a hacer más clics sin aportar claridad.
+| Variante de ejemplo | Referencia | Existencias ficticias |
+| --- | --- | ---: |
+| Azul, S | CS-BAH-AZ-S | 4 |
+| Azul, M | CS-BAH-AZ-M | 0 |
+| Azul, L | CS-BAH-AZ-L | 6 |
+| Blanca, S | CS-BAH-BL-S | 3 |
+| Blanca, M | CS-BAH-BL-M | 5 |
+| Blanca, L | CS-BAH-BL-L | 2 |
 
-> **Ejemplo.** Una persona busca una bolsa reutilizable. Si el menú dice «Departamento 04», probablemente no sabrá dónde encontrarla. «Bolsas» comunica mejor el contenido.
+El total del ejemplo es 20 unidades, pero no existe disponibilidad de azul M. Mostrar únicamente «20 en stock» no responde a la necesidad de quien ha elegido esa combinación. La disponibilidad debe corresponder al nivel adecuado del modelo.
 
-## Preparar una ficha de producto
+La [gestión de existencias de PrestaShop](https://docs.prestashop-project.org/v.9-documentation/user-guide/selling/managing-catalog/managing-stock) distingue consulta de cantidades y movimientos. No debe confundirse ese historial operativo con el historial de redacción de una descripción.
 
-1. **Identificación.** Escribe un nombre concreto y una referencia consistente.
-2. **Descripción breve.** Explica la utilidad y las propiedades principales.
-3. **Datos comparables.** Registra composición, medidas o capacidad en sus campos.
-4. **Variantes.** Identifica las opciones que el cliente puede seleccionar.
-5. **Imágenes.** Muestra el producto con encuadre y calidad consistentes.
-6. **Comprobación.** Revisa el resultado desde la tienda, como lo haría un cliente.
+## Campos compartidos y campos por variante
 
-Una descripción original debe ayudar a decidir. Repetir «la mejor camiseta» no resuelve dudas sobre ajuste, cuidado o composición.
+La descripción general y las instrucciones de cuidado pueden compartirse si son válidas para todas las variantes. Una referencia, una imagen específica o una cantidad pueden pertenecer a cada combinación. El precio puede ser común o variar según las reglas del negocio y las capacidades del sistema.
 
-## Coherencia del conjunto
+La duplicación debe ser deliberada. Crear seis productos independientes para seis variantes puede dificultar la navegación y el mantenimiento. Sin embargo, agrupar artículos demasiado distintos bajo un mismo producto también puede confundir. El criterio es si la persona los entiende como opciones de una oferta y si el sistema puede representar sus diferencias.
 
-Una ficha correcta no compensa un catálogo incoherente. Si unas camisetas usan «M», otras «Mediana» y otras «Medium» sin un criterio, la búsqueda y la comparación pueden resultar confusas.
+## Identificadores, unidades y vocabularios
 
-También conviene acordar unidades. Una mochila de «20» necesita indicar si hablamos de litros, centímetros o euros. Los números sin contexto no son información suficiente.
+Una referencia interna no tiene por qué coincidir con un identificador comercial externo como un GTIN. Cada identificador necesita significado, formato y reglas de unicidad. Inventar valores externos para rellenar un campo genera datos falsos.
 
-## Imágenes y estructura
+Las magnitudes requieren unidad. «Capacidad: 20» no permite comparar; «Capacidad: 20 L» sí. En un modelo más estructurado, valor y unidad pueden guardarse separados para facilitar validación y conversión.
 
-La imagen debe corresponder al producto y a la variante que se presenta. El tamaño apropiado depende del lugar donde se muestra y de la configuración del tema.
+También deben normalizarse nombres: M, Mediana y Medium no deberían tratarse como tallas diferentes por descuido. Las equivalencias entre sistemas de tallaje deben explicarse; no se pueden asumir solo porque dos etiquetas parezcan similares.
 
-La tienda puede generar varias versiones de una imagen para diferentes usos. Eso no convierte una fotografía borrosa en una fotografía de calidad. El original debe ser adecuado y las proporciones deben revisarse.
+## Descripciones que ayudan a decidir
 
-### Actividad de preparación
+Un título identifica; una descripción breve explica utilidad; los datos estructurados permiten comparar; una descripción extensa aporta detalles y limitaciones. Repetir «calidad excelente» no informa sobre medidas, ajuste o cuidado.
 
-Crea en papel una ficha para una camiseta de Costa Sur. Separa el nombre, la categoría, tres características y dos atributos que generen variantes. Después comprueba qué datos cambiarían si vendieras esa misma camiseta en otra talla.
+Para la Camiseta Bahía, una ficha útil podría indicar composición, medidas por talla, tipo de corte, cuidado y qué representa cada imagen. Las afirmaciones sobre origen o prestaciones deben tener una fuente verificable. La creatividad comercial no debe convertir una suposición en un hecho.
 
-## Referencias
+El texto debe ser coherente con las variantes. Si una imagen muestra un accesorio no incluido, la ficha debe evitar que se interprete como parte de la oferta.
 
-- [PrestaShop: gestionar productos](https://docs.prestashop-project.org/v.9-documentation/user-guide/selling/managing-catalog/managing-products).
-- [PrestaShop: configuración de imágenes](https://docs.prestashop-project.org/v.9-documentation/user-guide/improving-shop/customizing-store-design/image-settings).
+## Categorías y facetas
+
+Las categorías proporcionan agrupaciones estables. Las facetas permiten combinar dimensiones: talla M, azul y material concreto. Una categoría «Novedades» puede representar una selección temporal, mientras que «Camisetas» representa un tipo de artículo.
+
+Un producto puede tener varios accesos sin duplicar su ficha. Las decisiones sobre categoría principal, enlaces y filtros deben mantener una experiencia consistente. Los valores incompletos hacen que filtros aparentemente correctos oculten productos pertinentes.
+
+## Mantenimiento del catálogo
+
+El ciclo de una ficha incluye incorporación, validación, publicación, actualización y retirada. Al descatalogar un producto hay que revisar enlaces, variantes, recomendaciones, campañas y activos compartidos.
+
+Los cambios masivos necesitan más control porque afectan a muchas piezas. Una importación que confunde unidades o interpreta mal separadores decimales puede propagar errores. La validación debe comprobar muestras representativas y recuentos, no solo que el archivo se haya aceptado.
+
+## Comprueba la comprensión
+
+**¿Seis combinaciones implican seis unidades en stock?** No. El número de opciones y la cantidad disponible son dimensiones distintas.
+
+**¿Por qué separar categoría y color?** Porque normalmente responden a dimensiones diferentes y pueden combinarse para filtrar sin multiplicar categorías.
+
+**¿Qué ocurre si cambia una fotografía común?** Puede afectar a todas las variantes o vistas que la reutilizan. Hay que conocer sus relaciones antes de sustituirla.

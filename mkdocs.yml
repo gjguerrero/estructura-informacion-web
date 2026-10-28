@@ -1,14 +1,21 @@
 site_name: Estructura de la Información Web
-site_description: Apuntes del bloque de CMS y comercio electrónico. Máster Oficial en Gestión y Tecnologías de Procesos de Negocio, Universidad de Cádiz.
+site_description: Fundamentos de los sistemas de gestión de contenidos (CMS). MGTPN, Universidad de Cádiz.
 site_author: Gabriel Guerrero
 site_url: !ENV [SITE_URL, 'http://127.0.0.1:8000/']
 use_directory_urls: true
+# No publicar las secciones de la versión anterior, aunque aún queden en el repositorio.
+exclude_docs: |
+  /preparacion/
+  /prestashop/
+  /descargas/
+  /recursos.md
+  /assets/javascripts/guide.js
 theme:
   name: readthedocs
   locale: es
   highlightjs: false
-  navigation_depth: 3
-  collapse_navigation: false
+  navigation_depth: 2
+  collapse_navigation: true
   sticky_navigation: true
   prev_next_buttons_location: bottom
 plugins:
@@ -21,32 +28,39 @@ markdown_extensions:
   - fenced_code
   - toc:
       permalink: true
+validation:
+  nav:
+    omitted_files: warn
+    not_found: warn
+    absolute_links: warn
+  links:
+    not_found: warn
+    anchors: warn
+    unrecognized_links: warn
 extra_css:
   - assets/stylesheets/uca.css
-extra_javascript:
-  - assets/javascripts/guide.js
 nav:
-  - Inicio: index.md
   - Fundamentos:
-      - 1. La web y la información: fundamentos/web.md
+      - Presentación: index.md
+      - 1. La web como sistema de información: fundamentos/web.md
       - 2. Qué es un CMS: fundamentos/cms.md
-      - 3. Comercio electrónico: fundamentos/comercio-electronico.md
-      - 4. Organizar un catálogo: fundamentos/catalogo.md
-  - Preparación del equipo:
-      - Antes de empezar: preparacion/antes.md
-      - Requisitos: preparacion/requisitos.md
-      - Virtualización: preparacion/virtualizacion.md
-      - Instalar VirtualBox: preparacion/virtualbox.md
-      - Descargar la máquina: preparacion/descarga.md
-      - Importar la máquina: preparacion/importar.md
-  - Prácticas con PrestaShop:
-      - Comprender el entorno: prestashop/entorno.md
-      - Encender la máquina: preparacion/arrancar.md
-      - Direcciones y acceso: preparacion/accesos.md
-      - Actividades de práctica: prestashop/actividades.md
-      - Guardar y apagar: preparacion/guardar.md
-      - Rutina de cada clase: preparacion/cada-clase.md
-  - Consulta:
-      - Resolver problemas: preparacion/problemas.md
-      - Al finalizar el curso: preparacion/eliminar.md
-      - Glosario y recursos: recursos.md
+      - 3. Historia y evolución: fundamentos/historia.md
+      - 4. Qué es el contenido: fundamentos/contenido.md
+      - 5. Tipos, campos y relaciones: fundamentos/modelado.md
+      - 6. Metadatos: fundamentos/metadatos.md
+      - 7. Organización y búsqueda: fundamentos/arquitectura-informacion.md
+      - 8. Usuarios, roles y permisos: fundamentos/usuarios-roles-permisos.md
+      - 9. Ciclo de vida y revisión: fundamentos/ciclo-vida-revision.md
+      - 10. Presentación y multimedia: fundamentos/presentacion-multimedia.md
+      - 11. Arquitecturas de CMS: fundamentos/arquitecturas.md
+      - 12. Extensiones e integraciones: fundamentos/extensiones-integraciones.md
+      - 13. Calidad y accesibilidad: fundamentos/calidad-accesibilidad.md
+      - 14. Descubrimiento y SEO: fundamentos/descubrimiento-seo.md
+      - 15. Idiomas y canales: fundamentos/idiomas-canales.md
+      - 16. Seguridad y mantenimiento: fundamentos/seguridad-mantenimiento.md
+      - 17. Gobernanza editorial: fundamentos/gobernanza.md
+      - 18. Tipos y elección de CMS: fundamentos/seleccion-cms.md
+      - 19. Comercio electrónico: fundamentos/comercio-electronico.md
+      - 20. Catálogo y variantes: fundamentos/catalogo.md
+      - 21. Evaluación y migración: fundamentos/evaluacion-migracion.md
+      - 22. Caso integrador: fundamentos/caso-integrador.md
