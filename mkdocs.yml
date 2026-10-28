@@ -1,0 +1,52 @@
+site_name: Estructura de la Información Web
+site_description: Apuntes del bloque de CMS y comercio electrónico. Máster Oficial en Gestión y Tecnologías de Procesos de Negocio, Universidad de Cádiz.
+site_author: Gabriel Guerrero
+site_url: !ENV [SITE_URL, 'http://127.0.0.1:8000/']
+use_directory_urls: true
+theme:
+  name: readthedocs
+  locale: es
+  highlightjs: false
+  navigation_depth: 3
+  collapse_navigation: false
+  sticky_navigation: true
+  prev_next_buttons_location: bottom
+plugins:
+  - search:
+      lang: es
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - fenced_code
+  - toc:
+      permalink: true
+extra_css:
+  - assets/stylesheets/uca.css
+extra_javascript:
+  - assets/javascripts/guide.js
+nav:
+  - Inicio: index.md
+  - Fundamentos:
+      - 1. La web y la información: fundamentos/web.md
+      - 2. Qué es un CMS: fundamentos/cms.md
+      - 3. Comercio electrónico: fundamentos/comercio-electronico.md
+      - 4. Organizar un catálogo: fundamentos/catalogo.md
+  - Preparación del equipo:
+      - Antes de empezar: preparacion/antes.md
+      - Requisitos: preparacion/requisitos.md
+      - Virtualización: preparacion/virtualizacion.md
+      - Instalar VirtualBox: preparacion/virtualbox.md
+      - Descargar la máquina: preparacion/descarga.md
+      - Importar la máquina: preparacion/importar.md
+  - Prácticas con PrestaShop:
+      - Comprender el entorno: prestashop/entorno.md
+      - Encender la máquina: preparacion/arrancar.md
+      - Direcciones y acceso: preparacion/accesos.md
+      - Actividades de práctica: prestashop/actividades.md
+      - Guardar y apagar: preparacion/guardar.md
+      - Rutina de cada clase: preparacion/cada-clase.md
+  - Consulta:
+      - Resolver problemas: preparacion/problemas.md
+      - Al finalizar el curso: preparacion/eliminar.md
+      - Glosario y recursos: recursos.md

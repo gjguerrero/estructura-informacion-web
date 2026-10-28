@@ -1,0 +1,48 @@
+/* Adaptación para pantalla de los colores UCA: Pantone 308 y Pantone 152. */
+:root { --uca-blue:#00587c; --uca-deep:#003e59; --uca-orange:#e57200; --uca-gray:#75787b; }
+body,.wy-body-for-nav { background:#f1f5f7; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:#193743; }
+.wy-nav-side { background:var(--uca-deep); }
+.wy-side-nav-search,.wy-nav-top { background:var(--uca-blue); }
+.wy-side-nav-search { padding:1.35rem 1rem; border-bottom:4px solid var(--uca-orange); }
+.wy-side-nav-search>a { font-size:1.15rem; line-height:1.4; }
+.wy-side-nav-search input[type=text] { border-color:#b9d5df; border-radius:7px; }
+.wy-menu-vertical p.caption { color:#a9d8ea; margin-top:18px; letter-spacing:.035em; font-size:.78rem; }
+.wy-menu-vertical a { color:#e0edf2; font-size:.92rem; line-height:1.4; }
+.wy-menu-vertical a:hover { background:#146681; }
+.wy-menu-vertical li.current>a,.wy-menu-vertical li.toctree-l1.current>a { border-left:4px solid var(--uca-orange); }
+.wy-menu-vertical li.current a { color:#214350; }
+.wy-nav-content-wrap { background:#f1f5f7; }
+.wy-nav-content { max-width:1100px; padding:2.3rem 3.2rem; min-height:100vh; background:#fff; }
+.rst-content { font-size:16px; line-height:1.7; }
+.rst-content h1,.rst-content h2,.rst-content h3 { font-family:inherit; color:var(--uca-deep); }
+.rst-content h1 { font-size:2.15rem; line-height:1.22; margin-bottom:1.1rem; }
+.rst-content h2 { font-size:1.5rem; margin-top:2.25rem; padding-bottom:.4rem; border-bottom:1px solid #d9e5eb; }
+.rst-content h3 { font-size:1.18rem; margin-top:1.6rem; }
+.rst-content a { color:var(--uca-blue); text-underline-offset:3px; }
+.rst-content p,.rst-content li { line-height:1.7; }
+.rst-content .admonition { border:1px solid #c9dfe8; border-radius:8px; overflow:hidden; box-shadow:none; background:#eef6fa; }
+.rst-content .admonition-title { background:var(--uca-blue); }
+.rst-content .admonition.warning { background:#fff5e9; border-color:#eed7bb; }
+.rst-content .warning .admonition-title { background:#ad5600; }
+.rst-content table.docutils { display:block; overflow:auto; width:100%; border:1px solid #d5e2e8; }
+.rst-content table.docutils td,.rst-content table.docutils th { white-space:normal; min-width:110px; vertical-align:top; font-size:.94rem; }
+.rst-content table.docutils th { background:#eaf3f7; }
+.rst-content pre { overflow:auto; border-radius:8px; }
+.rst-content code { color:#154d65; background:#eff5f8; border-color:#dce7ec; }
+.rst-content blockquote { border-left:4px solid var(--uca-orange); margin-left:0; padding:10px 18px; background:#fff7ee; }
+.course-meta { color:#526d79; font-size:.95rem; }
+.btn-neutral { color:var(--uca-blue)!important; border-radius:6px; }
+.rst-content .copyline { display:flex; align-items:center; gap:12px; padding:12px; margin:14px 0; background:#eff5f8; border:1px solid #d5e2e8; border-radius:8px; }
+.rst-content .copyline code { flex:1; min-width:0; padding:0; border:0; background:transparent; white-space:normal; overflow-wrap:anywhere; }
+.rst-content .copyline button { flex:none; padding:8px 12px; border:1px solid var(--uca-blue); border-radius:6px; background:var(--uca-blue); color:white; font:inherit; font-size:.88rem; cursor:pointer; }
+.rst-content .copyline button:hover { background:var(--uca-deep); }
+.rst-content .status-list { list-style:none; margin-left:0; padding-left:0; }
+.rst-content .status-list li { list-style:none; margin-left:0; margin-bottom:10px; }
+.rst-content .status-list label { display:flex; align-items:baseline; gap:10px; font-weight:400; cursor:pointer; }
+.rst-content .status-list input { flex:none; accent-color:var(--uca-blue); width:18px; height:18px; }
+.guide-status { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); max-width:calc(100% - 32px); padding:12px 18px; background:var(--uca-deep); color:white; border-radius:8px; z-index:500; }
+:focus-visible { outline:3px solid var(--uca-orange); outline-offset:3px; }
+@media(min-width:1100px) { .wy-nav-content-wrap { margin-left:300px; } }
+@media(max-width:768px) { .wy-nav-content { padding:1.5rem 1.2rem; } .rst-content h1 { font-size:1.8rem; } .wy-nav-content-wrap { margin-left:0; } }
+@media(max-width:480px) { .rst-content .copyline { flex-direction:column; align-items:flex-start; } }
+@media print { .wy-nav-side,.wy-nav-top,.rst-footer-buttons { display:none!important; } .wy-nav-content-wrap { margin:0!important; } .wy-nav-content { max-width:none; padding:0; } }
