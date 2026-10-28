@@ -2,68 +2,68 @@
 
 ## El núcleo y las funciones adicionales
 
-El **núcleo** del CMS aporta las funciones básicas del producto. Una **extensión**, módulo o plugin añade o modifica capacidades. Un tema suele concentrarse en presentación, aunque en algunos ecosistemas pueda incluir comportamiento adicional. Conviene conocer dónde se guarda cada responsabilidad.
+El **núcleo** reúne las funciones que forman parte del propio CMS. Una **extensión**, también llamada módulo o plugin según el producto, añade o modifica funciones. Por ejemplo, puede incorporar un formulario de contacto. Un **tema** se ocupa principalmente de la presentación. Conviene saber qué componente aporta cada función para poder mantenerlo o sustituirlo.
 
-Ampliar un sistema puede ser más económico que desarrollar desde cero, pero añade dependencias. Una función puede dejar de estar mantenida, cambiar de licencia o resultar incompatible con otra actualización. La decisión de instalar un componente debe incluir quién lo revisará y qué ocurrirá si hay que sustituirlo.
+Utilizar una extensión existente puede ahorrar trabajo de programación. A cambio, la organización pasa a depender también de ese componente. Hay que comprobar si se mantiene, si es compatible con el CMS y qué condiciones tiene su uso. También conviene asignar quién lo revisará y qué se hará si deja de funcionar o de recibir actualizaciones.
 
-Dos extensiones pueden intentar resolver el mismo problema con reglas diferentes. Por ejemplo, cada una podría generar una URL canónica o gestionar el envío de formularios. La acumulación de funciones sin diseño puede producir contradicciones difíciles de diagnosticar.
+Instalar varias extensiones con funciones similares puede provocar conflictos. Por ejemplo, dos componentes podrían intentar enviar el mismo correo al recibir un formulario y generar mensajes duplicados. Antes de añadir uno nuevo, conviene comprobar qué función resolverá y cómo se relacionará con los ya instalados.
 
 ## Configurar, extender y desarrollar
 
-**Configurar** es utilizar opciones previstas por el producto. **Extender** es incorporar componentes que añaden capacidades. **Desarrollar** implica crear comportamiento propio. La frontera puede variar, pero ayuda a estimar costes y mantenimiento.
+**Configurar** consiste en elegir entre las opciones que ya ofrece la herramienta, como activar la revisión antes de publicar. **Extender** consiste en instalar un componente que añade una función, como un nuevo tipo de formulario. **Desarrollar** implica programar una solución propia. Estas alternativas requieren distintos recursos y tareas de mantenimiento.
 
 Antes de programar un flujo especial, conviene comprobar si se puede representar mediante estados, permisos y campos existentes. Antes de instalar un módulo, hay que verificar que resuelve la necesidad concreta y no solo presenta una descripción parecida.
 
-Una necesidad recurrente y central puede justificar desarrollo. Una excepción ocasional quizá se resuelva mejor ajustando el proceso. La decisión debe considerar la frecuencia, el riesgo y el coste de mantener la solución durante años.
+Si una tarea se repite con frecuencia y es importante para el servicio, puede justificar una función específica. Por ejemplo, revisar cientos de solicitudes cada semana puede requerir una herramienta adaptada. Una petición excepcional puede resolverse ajustando el procedimiento. Hay que valorar tanto el trabajo que se ahorra como el esfuerzo de mantener la solución.
 
 ## Qué significa integrar sistemas
 
-Una **integración** coordina información u operaciones entre sistemas. Puede usar archivos de intercambio, APIs, eventos o conectores. Transportar datos es solo una parte: también hay que acordar significados, identificadores, permisos y tratamiento de errores.
+Una **integración** permite que dos sistemas trabajen de forma coordinada. Por ejemplo, el sistema de inventario puede comunicar a la tienda cuántas camisetas quedan. Para que el intercambio funcione, ambos deben reconocer el mismo producto, interpretar igual la cantidad y saber qué hacer si el envío falla. Pueden intercambiar la información mediante archivos, APIs u otros mecanismos.
 
-Una **sincronización** busca mantener determinada correspondencia entre copias. No siempre es inmediata ni bidireccional. Debe definirse qué sistema manda sobre cada campo y cómo se resuelve un conflicto.
+La **sincronización** mantiene actualizados determinados datos entre sistemas. Puede realizarse cada cierto tiempo o cuando se produce un cambio, y puede funcionar en una sola dirección o en ambas. En el ejemplo, el inventario puede ser la fuente de las existencias y la tienda recibir sus valores. Hay que decidir dónde se permite modificar cada dato y cómo se resuelven diferencias.
 
-| Información de Costa Sur | Fuente acordada en el ejemplo | Consumidor |
+| **Información de Costa Sur** | **Fuente acordada en el ejemplo** | **Dónde se utiliza** |
 | --- | --- | --- |
 | Descripción editorial | CMS o gestor del catálogo | Web y otros canales. |
 | Existencias operativas | Sistema de inventario | Tienda online. |
-| Fotografías aprobadas | Biblioteca de activos | Fichas y campañas. |
+| Fotografías aprobadas | Biblioteca de imágenes y otros recursos. | Fichas y campañas. |
 | Estado del pago | Proveedor de pagos | Gestión del pedido. |
-| Datos del pedido | Sistema de comercio | Atención y preparación. |
+| Datos del pedido | Sistema de comercio | Atención al cliente y preparación del envío. |
 
-La tabla es una posible distribución, no una arquitectura obligatoria de PrestaShop. Una tienda pequeña puede concentrar más funciones en una sola aplicación.
+La tabla muestra una posible organización de Costa Sur. No describe una configuración obligatoria de PrestaShop. Una tienda pequeña puede gestionar varias de esas tareas dentro de una misma aplicación.
 
 ## API, evento y webhook
 
-Una API permite solicitar datos u operaciones. Un **evento** informa de algo ocurrido, como la publicación de una pieza. Un **webhook** es un mecanismo por el que un sistema envía una notificación a una dirección configurada cuando sucede un evento.
+Una **API** permite que una aplicación pida información o solicite una acción a otra. Un **evento** indica que algo ha ocurrido, como la publicación de una noticia. Un **webhook** permite avisar automáticamente a otra aplicación cuando ocurre un evento. Por ejemplo, al publicar una noticia, el CMS puede enviar un aviso a una dirección configurada para que otra aplicación actualice su listado.
 
-Recibir «producto actualizado» no garantiza que todos los consumidores ya se hayan actualizado. Puede haber retrasos o fallos. Si una notificación se reintenta, el destinatario debe evitar duplicar efectos como crear varias veces el mismo registro. La **idempotencia** describe una operación cuyo efecto no se multiplica por repetir la misma solicitud en las condiciones previstas.
+El aviso puede llegar con retraso, fallar o enviarse otra vez. Por eso, recibir el mensaje "Producto actualizado" no demuestra que todos los sistemas ya muestren el cambio. Además, repetir un aviso no debería crear dos veces el mismo registro. Una operación es **idempotente** cuando repetir la misma solicitud produce el mismo efecto final que realizarla una sola vez. Por ejemplo, fijar las existencias de un producto en cinco unidades puede repetirse sin sumar otras cinco cada vez.
 
-Para comprender la dimensión organizativa basta preguntar: cómo detectamos el fallo, quién recibe el aviso, qué puede reintentarse y cómo sabemos que los sistemas vuelven a coincidir.
+La organización necesita saber cómo se detecta un fallo de intercambio, quién recibe el aviso y cómo se corrige. Después de reintentar una actualización, debe comprobarse que los sistemas muestran datos coherentes. Estas tareas también forman parte del mantenimiento de la integración.
 
 ## No todos los gestores son CMS web
 
-| Sistema | Centro de atención | Relación posible con un CMS |
+| **Sistema** | **Centro de atención** | **Relación posible con un CMS** |
 | --- | --- | --- |
-| DMS o gestor documental | Documentos, versiones y acceso. | Proporcionar documentación relacionada. |
-| ECM | Gestión de información y procesos documentales empresariales. | Coordinar publicación y documentación interna. |
-| DAM | Activos digitales, derechos y derivados. | Suministrar imágenes y vídeos aprobados. |
-| PIM | Información de productos y su distribución. | Alimentar fichas de catálogo. |
-| LMS | Enseñanza, participantes y aprendizaje. | Ofrecer contenidos y actividades formativas. |
-| CRM | Relaciones con clientes y contactos. | Coordinar comunicaciones y atención. |
-| ERP | Recursos y operaciones del negocio. | Intercambiar datos comerciales u operativos. |
+| Gestión documental (DMS) | Document Management System. Gestiona documentos, versiones y acceso. | Proporcionar documentación relacionada. |
+| Contenido empresarial (ECM) | Enterprise Content Management. Organiza información y procesos documentales de la empresa. | Coordinar publicación y documentación interna. |
+| Activos digitales (DAM) | Digital Asset Management. Gestiona imágenes, vídeos, derechos y versiones derivadas. | Suministrar imágenes y vídeos aprobados. |
+| Información de productos (PIM) | Product Information Management. Organiza los datos de productos y su distribución. | Alimentar fichas de catálogo. |
+| Gestión del aprendizaje (LMS) | Learning Management System. Organiza cursos, participantes y actividades formativas. | Ofrecer contenidos y actividades formativas. |
+| Relación con clientes (CRM) | Customer Relationship Management. Gestiona contactos, comunicaciones y atención a clientes. | Coordinar comunicaciones y atención. |
+| Recursos empresariales (ERP) | Enterprise Resource Planning. Integra operaciones como compras, inventario o contabilidad. | Intercambiar datos comerciales u operativos. |
 
-Las siglas describen orientaciones y sus funciones pueden solaparse. No implican que cada organización necesite siete aplicaciones. La pregunta útil es qué información y proceso tiene dueño en cada sistema.
+La tabla compara herramientas que pueden relacionarse con un CMS web. Sus funciones pueden coincidir parcialmente y una organización no tiene por qué utilizar una aplicación distinta para cada fila. Lo necesario es saber dónde se mantiene cada información. Por ejemplo, debe quedar claro si el precio se modifica en el catálogo o se recibe de otro sistema.
 
-## Contratos y mantenimiento
+## Qué debe acordarse en una integración
 
-Una integración necesita documentar campos, unidades, identificadores, frecuencia y reglas. «Precio» es ambiguo si un extremo espera un importe con impuestos y el otro espera una base sin ellos. «Disponible» puede significar que existe stock o que la ficha está publicada.
+Hay que documentar qué significa cada campo, en qué unidades se expresa y con qué frecuencia se actualiza. Si un sistema envía "Precio" sin aclarar si incluye impuestos, el otro puede interpretarlo de forma incorrecta. También debe distinguirse entre un producto cuya ficha está publicada y uno que tiene existencias disponibles para comprar.
 
-También debe limitarse el acceso de la integración a lo necesario. Una cuenta técnica que solo sincroniza títulos no debería administrar usuarios. Sus credenciales y fallos necesitan un responsable.
+La aplicación conectada debe tener acceso solo a lo que necesita. Si únicamente actualiza títulos, su cuenta no necesita administrar usuarios. Debe haber una persona responsable de sus credenciales de acceso y de atender los fallos de comunicación.
 
 ## Comprueba la comprensión
 
 **¿Instalar un plugin evita todo mantenimiento futuro?** No. Añade una pieza que debe mantenerse compatible y revisarse.
 
-**¿Una API garantiza integración semántica?** No. Dos sistemas pueden intercambiar mensajes válidos y entender de forma distinta sus campos.
+**¿Una API garantiza que dos sistemas interpreten igual los datos?** No. Pueden intercambiar un número correctamente y entender cosas distintas. Por ejemplo, uno puede tratarlo como precio con impuestos y otro como precio sin impuestos. Esa interpretación debe acordarse.
 
-**¿Por qué no actualizar el mismo dato libremente en dos sistemas?** Porque pueden producirse conflictos y sobrescrituras. Hay que definir una fuente y una política de resolución.
+**¿Por qué no actualizar el mismo dato libremente en dos sistemas?** Porque una modificación puede sobrescribir otra o dejar valores diferentes. Conviene definir dónde se mantiene el dato y cómo se resolverán las discrepancias.

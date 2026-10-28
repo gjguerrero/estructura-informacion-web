@@ -4,32 +4,32 @@
 
 Un contenido útil debe ser exacto, pertinente, comprensible, completo para su propósito y mantenido. También debe poder localizarse y utilizarse en condiciones diversas. Una página puede ser gramaticalmente correcta y fallar porque omite el plazo o porque el formulario resulta inaccesible.
 
-La **usabilidad** se relaciona con la facilidad para lograr objetivos. La **accesibilidad** busca que las personas con distintas capacidades puedan percibir, comprender y operar el contenido y la interfaz. Ambas se relacionan, pero no son sinónimos ni se garantizan solo con una apariencia sencilla.
+La **usabilidad** se refiere a la facilidad con la que una persona puede completar una tarea. Por ejemplo, localizar los requisitos y presentar una solicitud. La **accesibilidad** busca que el contenido y los controles puedan utilizarse por personas con distintas capacidades, incluidas quienes emplean tecnologías de apoyo. Una página puede parecer sencilla y, sin embargo, tener un formulario que no pueda utilizarse con el teclado.
 
 ## Redactar para una tarea
 
-El título debe permitir anticipar qué resuelve la página. La información decisiva debe encontrarse sin leer todo el documento. Los encabezados ayudan a recorrerlo; los ejemplos aclaran reglas que de otro modo resultarían abstractas.
+El título debe ayudar a reconocer qué ofrece la página. Los encabezados permiten localizar sus partes sin leer todo el texto. Por ejemplo, una convocatoria con apartados de requisitos, plazo y solicitud facilita encontrar la información necesaria. Los ejemplos ayudan a interpretar las condiciones que puedan resultar confusas.
 
-Comparemos «Información general de interés» con «Requisitos para solicitar la tutoría». El segundo título establece una expectativa concreta. Si después aparece un texto sobre la historia del servicio y no los requisitos, el problema no se arregla añadiendo palabras clave: hay que alinear propósito, título y contenido.
+El título "Requisitos para solicitar la tutoría" orienta mejor que "Información general de interés". También compromete al contenido de la página. Si después solo se explica la historia del servicio, la persona no encontrará los requisitos que esperaba. El título y el texto deben responder a la misma necesidad.
 
-El lenguaje claro no exige eliminar conceptos técnicos necesarios. Exige definirlos, usarlos de forma consistente y evitar ambigüedades. «Se hará próximamente» debe sustituirse por una fecha o por una explicación honesta de que aún no se ha fijado.
+El lenguaje claro no exige eliminar conceptos técnicos necesarios. Exige definirlos, usarlos de forma consistente y evitar ambigüedades. "Se hará próximamente" debe sustituirse por una fecha o por una explicación honesta de que aún no se ha fijado.
 
 ## Cuatro principios de accesibilidad
 
-La [síntesis de WCAG del W3C](https://www.w3.org/WAI/standards-guidelines/wcag/glance/) organiza las pautas en cuatro principios: perceptible, operable, comprensible y robusto. Son un marco para evaluar la experiencia, no una lista que se supera instalando una extensión.
+Las **WCAG**, Web Content Accessibility Guidelines o Pautas de Accesibilidad para el Contenido Web, organizan sus recomendaciones alrededor de cuatro principios. El contenido debe ser perceptible, operable, comprensible y robusto. La [síntesis de WCAG del W3C](https://www.w3.org/WAI/standards-guidelines/wcag/glance/) los presenta y la tabla muestra ejemplos de su aplicación a un portal.
 
-| Principio | Pregunta editorial o de interfaz | Ejemplo del portal |
+| **Principio** | **Pregunta editorial o de interfaz** | **Ejemplo del portal** |
 | --- | --- | --- |
 | Perceptible | ¿Puede recibirse la información de otra forma? | El plazo está escrito como texto y no solo dentro de un cartel. |
 | Operable | ¿Puede realizarse la tarea con distintos medios? | El menú y el formulario se utilizan con teclado. |
 | Comprensible | ¿Se entienden las instrucciones y errores? | Se explica qué dato falta y cómo corregirlo. |
 | Robusto | ¿La estructura es interpretable por herramientas diversas? | Encabezados, enlaces y controles tienen significado y etiquetas. |
 
-La tabla aplica esos principios a ejemplos propios; no reproduce todos los criterios de conformidad ni acredita por sí sola el cumplimiento de un sitio.
+Los ejemplos ayudan a comprender los principios, pero no recogen todas las comprobaciones necesarias para evaluar la accesibilidad de un sitio. Cada principio se desarrolla mediante criterios más concretos.
 
 ## Responsabilidades compartidas
 
-El equipo técnico define componentes y comportamiento. El diseño establece contrastes, jerarquía y estados. El equipo editorial introduce encabezados, enlaces, textos alternativos y contenido comprensible. Las compras y decisiones organizativas condicionan qué herramientas se podrán usar.
+La accesibilidad requiere trabajo de varias partes del equipo. Quien desarrolla debe hacer que los controles funcionen con los medios de interacción previstos. Quien diseña debe cuidar aspectos como el contraste y la legibilidad. Quien edita debe organizar el texto y proporcionar enlaces y alternativas de imágenes comprensibles. La organización también debe elegir herramientas que permitan realizar esas tareas.
 
 Una plantilla accesible puede recibir un cartel sin alternativa textual. Un texto bien redactado puede mostrarse en un componente que no se maneja con teclado. La revisión debe abarcar la combinación de sistema y contenido.
 
@@ -37,19 +37,19 @@ El panel de edición también importa. Si quien redacta no puede utilizarlo de f
 
 ## Encabezados, enlaces y formularios
 
-Los encabezados deben representar la estructura del documento. Saltar de nivel solo para conseguir otro tamaño visual confunde esa estructura. Los enlaces deben indicar un destino o una acción comprensible, especialmente cuando se leen fuera del párrafo.
+Los niveles de encabezado deben reflejar qué apartados dependen de otros. Por ejemplo, los requisitos académicos y económicos pueden ser subapartados de los requisitos de una beca. Su nivel no debe elegirse únicamente por el tamaño de la letra. Los enlaces también deben explicar adónde llevan, con textos como "Consultar los requisitos de la beca".
 
-Un formulario debe identificar cada campo, explicar los requisitos y señalar los errores de forma utilizable. No debe depender solo del color. Si un campo necesita un formato específico, conviene explicarlo antes de que la persona falle.
+Cada campo de un formulario debe tener una etiqueta comprensible. Si se pide una fecha con un formato concreto, conviene explicarlo antes de que se introduzca. Cuando haya un error, debe indicarse qué ocurre y cómo corregirlo. Marcar el borde en rojo sin ninguna explicación puede no ser suficiente.
 
 Una condición importante no debería desaparecer al cambiar de dispositivo. La revisión en pantalla pequeña permite detectar tablas ilegibles, textos ocultos y controles que obligan a desplazamientos incómodos.
 
 ## Revisión automática y revisión humana
 
-Las herramientas automáticas detectan ciertos problemas, como algunos contrastes o ausencia de atributos. No determinan por sí solas si un texto alternativo comunica lo necesario, si una secuencia tiene sentido o si una instrucción es clara.
+Las herramientas automáticas pueden detectar algunos problemas, como una imagen sin atributo de texto alternativo o ciertos contrastes insuficientes. Sin embargo, encontrar un texto alternativo no demuestra que describa lo necesario. Una persona debe revisar su sentido y comprobar si las instrucciones y el recorrido se entienden.
 
 Una evaluación combina herramientas, revisión manual y, cuando corresponde, participación de personas representativas. La [guía de evaluación de W3C WAI](https://www.w3.org/WAI/test-evaluate/) explica la complementariedad de estos enfoques.
 
-La evaluación debe incluir recorridos completos: encontrar una convocatoria, comprender requisitos y acceder a la solicitud. Una portada sin errores detectados no demuestra que ese recorrido sea accesible.
+También deben probarse tareas completas. Para solicitar una beca, una persona necesita encontrar la convocatoria, comprender los requisitos y utilizar el formulario. Comprobar solo la portada deja sin revisar buena parte de ese recorrido.
 
 ## Un criterio de aceptación editorial
 
@@ -63,4 +63,4 @@ La lista se adapta al tipo de contenido. Una noticia breve y una guía compleja 
 
 **¿Poner toda la información en una imagen es suficiente si se ve bien?** No. Hay que garantizar que la información pueda percibirse y utilizarse por otras vías.
 
-**¿Quién responde de la calidad?** Hay responsabilidades diferentes y coordinadas. El CMS puede facilitar controles; el proceso debe asignar quién los realiza y mantiene.
+**¿Quién responde de la calidad?** El trabajo se reparte entre quienes mantienen la herramienta, diseñan las páginas y preparan los contenidos. Debe quedar claro qué comprueba cada persona y quién atiende los problemas detectados.

@@ -2,31 +2,31 @@
 
 ## Traducir la interfaz y traducir contenidos
 
-Un CMS puede ofrecer su panel en español y conservar todas las noticias en otro idioma. La traducción de la **interfaz** afecta a controles y mensajes del programa. La traducción de la **configuración** puede afectar a nombres de menús o vocabularios. La traducción del **contenido** afecta a las piezas publicadas.
+Cambiar el idioma del panel del CMS puede traducir botones y mensajes del programa sin traducir las noticias. Esa es la traducción de la **interfaz**. La traducción de la **configuración** puede afectar a elementos definidos para el sitio, como el nombre de una sección. La traducción del **contenido** prepara las noticias o fichas en otro idioma. Hay que comprobar cada necesidad por separado.
 
 La [guía de Drupal sobre estas tres dimensiones](https://www.drupal.org/docs/user_guide/en/language-concept.html) muestra por qué deben tratarse por separado. Que un producto admita idiomas no demuestra que resuelva todos los requisitos de un proyecto multilingüe.
 
 ## Internacionalización y localización
 
-La **internacionalización** prepara un sistema para adaptarse a distintos idiomas y convenciones. La **localización** realiza esa adaptación a un contexto concreto. Incluye vocabulario, formatos, moneda, unidades, imágenes y expectativas culturales.
+La **internacionalización** prepara una herramienta para trabajar con distintos idiomas y convenciones. Por ejemplo, permite traducir mensajes y utilizar diferentes formatos de fecha. La **localización** adapta esa herramienta o un contenido a un público concreto. Incluye elegir las traducciones, los formatos, la moneda y otras referencias adecuadas para ese público.
 
-La fecha «03/04/2026» puede interpretarse de formas diferentes. Un precio necesita moneda y condiciones; un plazo con hora necesita una referencia temporal. Traducir las palabras sin revisar estos elementos puede conservar el error en varios idiomas.
+La fecha "03/04/2026" puede interpretarse como el 3 de abril o el 4 de marzo según la convención utilizada. Un precio necesita indicar su moneda y un plazo con hora necesita aclarar la zona horaria. Estos datos deben revisarse al adaptar un contenido, además de traducir sus palabras.
 
-El idioma y el país tampoco son equivalentes. Una misma lengua se utiliza en distintos territorios y una organización puede necesitar información diferente por audiencia o jurisdicción. Esa variación debe modelarse de forma explícita.
+Un idioma puede utilizarse en varios países con convenciones o necesidades diferentes. Por ejemplo, dos versiones en español pueden ofrecer condiciones de entrega distintas porque se dirigen a territorios diferentes. El modelo debe distinguir cuándo cambia únicamente el idioma y cuándo cambia también la información ofrecida.
 
 ## Identidad compartida y versiones lingüísticas
 
-Las traducciones pueden vincularse a una misma entidad conceptual. Así, una persona puede pasar de la ficha española a su equivalente en otro idioma. El sistema debe conocer esa relación; no basta con que ambas páginas tengan títulos parecidos.
+El CMS debe reconocer qué páginas son traducciones de una misma pieza. Por ejemplo, la ficha en español de una actividad puede quedar vinculada con su versión en inglés. Así, el selector de idioma puede llevar a la misma actividad. Tener títulos parecidos no basta para establecer esa relación.
 
-Algunos campos pueden ser compartidos, como un identificador. Otros son traducibles, como descripción y título. Otros pueden necesitar adaptación específica, como una imagen con texto. La decisión se toma por campo y finalidad, no solo por página.
+Hay que decidir qué campos se comparten entre idiomas. El identificador de una actividad puede ser común, mientras que su título y descripción necesitan traducción. Una imagen que contiene texto también puede necesitar una versión adaptada. Estas decisiones evitan duplicar datos innecesariamente o dejar partes sin traducir.
 
 Si el lugar de un evento cambia, la actualización debería alcanzar las versiones que comparten ese dato. Si se corrige una expresión lingüística, quizá solo cambie una traducción.
 
 ## Flujo de traducción y vigencia
 
-Una traducción necesita estados y responsables. «Existe en inglés» no significa que esté actualizada respecto a la versión fuente. Conviene registrar qué revisión sirvió de origen y detectar cuándo una modificación exige nueva revisión.
+Una traducción puede seguir publicada aunque el original haya cambiado. Por ejemplo, si se amplía el plazo de una convocatoria en español, la versión inglesa puede conservar el plazo anterior. Conviene registrar qué versión se tradujo y asignar quién revisará los cambios para mantener la coherencia.
 
-| Situación | Decisión necesaria |
+| **Situación** | **Decisión necesaria** |
 | --- | --- |
 | Cambio de una errata sin alterar significado | Determinar si afecta a otras versiones. |
 | Cambio de fecha o requisito | Revisar todas las versiones afectadas. |
@@ -34,28 +34,28 @@ Una traducción necesita estados y responsables. «Existe en inglés» no signif
 | Traducción pendiente de aprobación | Evitar presentarla como validada. |
 | Retirada de la fuente | Revisar la retirada o conservación de sus traducciones. |
 
-La traducción automática puede producir borradores, pero no acredita equivalencia de significado, exactitud terminológica ni adecuación al público. El proceso debe asignar revisión cuando el uso lo requiera.
+La traducción automática puede ayudar a preparar un borrador. Antes de publicarlo, debe comprobarse que conserva el significado y utiliza los términos adecuados. Un error en una condición o en un plazo puede cambiar lo que entiende el público. La organización debe establecer qué revisión necesita cada tipo de contenido.
 
-## Ausencias y fallback
+## Qué hacer cuando falta una traducción
 
-Un **fallback** ofrece una alternativa cuando falta una versión. Por ejemplo, puede mostrarse el contenido en el idioma original. Debe ser una decisión explícita y comprensible para el público.
+Cuando una página todavía no está traducida, hay que decidir qué verá quien elija ese idioma. Puede mostrarse un aviso o facilitarse un enlace al contenido original, indicando en qué idioma está. La decisión debe ser comprensible para el público.
 
-Mezclar silenciosamente un título traducido con requisitos en otro idioma puede dar una impresión falsa de completitud. En ciertos contenidos es preferible indicar que la versión aún no está disponible. En otros, ofrecer la fuente claramente identificada puede ser útil.
+Mostrar un título en inglés y los requisitos en español sin explicarlo puede hacer pensar que la página está traducida de forma incompleta o defectuosa. Si se ofrece una versión parcial, debe quedar claro qué información está disponible. En otros casos puede ser preferible esperar a que la traducción esté revisada.
 
 El selector de idioma debe llevar a una página equivalente cuando exista. Enviar siempre a la portada obliga a repetir la búsqueda y rompe el contexto.
 
 ## Multicanal y multisitio
 
-La publicación **multicanal** distribuye información a diferentes medios, como web, aplicación y boletín. La gestión **multisitio** permite administrar varios sitios, con distintos grados de estructura, usuarios y contenido compartidos.
+La publicación **multicanal** utiliza una misma información en medios diferentes, como una web, una aplicación móvil y un boletín. La gestión **multisitio** permite administrar varios sitios web. Por ejemplo, una universidad puede mantener sitios para distintas facultades y compartir algunos recursos, aunque cada una gestione sus propias noticias.
 
-Reutilizar no significa mostrar todo igual. Una aplicación puede necesitar un resumen; una web, la explicación completa; una pantalla, un aviso breve. Los fragmentos deben conservar contexto y no introducir contradicciones.
+Cada canal puede necesitar una presentación diferente. Una pantalla informativa puede mostrar el título y la hora de una actividad, mientras que la web ofrece el programa completo. Ambos pueden utilizar el mismo registro. El resumen debe conservar la información necesaria y remitir al contenido completo cuando corresponda.
 
-La compartición también amplía el alcance de los cambios. Modificar un activo común puede afectar a varios sitios. Antes de publicarlo deben conocerse sus consumidores, responsables y condiciones de entrega.
+Los cambios en recursos compartidos pueden afectar a varios sitios. Por ejemplo, sustituir un logotipo común puede modificar todas las páginas que lo utilizan. Antes de hacerlo, conviene identificar dónde aparece, quién lo mantiene y cómo se actualizará en cada sitio.
 
 ## Comprueba la comprensión
 
-**¿Poner el panel en español traduce las fichas?** No. Son capas distintas.
+**¿Poner el panel en español traduce las fichas?** No. Puede cambiar el idioma de los botones y mensajes de edición, pero los textos de las fichas deben traducirse por separado.
 
-**¿Una traducción puede estar publicada y desactualizada?** Sí. Hay que relacionarla con la revisión fuente y revisar los cambios relevantes.
+**¿Una traducción puede estar publicada y desactualizada?** Sí. Si cambia el plazo de la versión original y no se revisan sus traducciones, estas pueden seguir mostrando el plazo anterior.
 
-**¿Multicanal significa copiar todo en varios sitios?** No necesariamente. Un modelo estructurado permite reutilizar una fuente y adaptar sus representaciones, con control de versiones y contexto.
+**¿Multicanal significa copiar todo en varios sitios?** No necesariamente. Una web y una aplicación pueden consultar el mismo registro y mostrar sus campos de forma diferente. Esto facilita mantener una fuente común, aunque siga siendo necesario comprobar cada canal.

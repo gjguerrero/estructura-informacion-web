@@ -2,13 +2,13 @@
 
 ## Medir para decidir
 
-Una **métrica** es una medida definida. Un **indicador** se interpreta en relación con un objetivo. Contar visitas puede resultar útil, pero no demuestra que las personas encuentren lo que necesitan ni que el contenido esté vigente.
+Una **métrica** es una medida, como el número de fichas revisadas durante un mes. Un **indicador** utiliza una medida para valorar un objetivo, por ejemplo, el porcentaje de fichas que tienen la revisión al día. El número de visitas informa sobre el acceso a una página, pero no demuestra por sí solo que las personas comprendan sus instrucciones.
 
-Antes de medir hay que formular una pregunta. «¿Se entiende la nueva guía?» requiere evidencia distinta de «¿cuántas páginas no tienen responsable?». El periodo, la población y la forma de contar deben estar claros.
+Primero hay que decidir qué se quiere averiguar. Para saber si una guía se entiende, puede observarse cómo la utilizan las personas. Para saber cuántas fichas no tienen responsable, puede consultarse ese campo. En cualquier medición hay que aclarar qué se cuenta y durante qué periodo.
 
 ## Indicadores del servicio y del proceso editorial
 
-| Pregunta | Indicador posible | Precaución al interpretarlo |
+| **Pregunta** | **Indicador posible** | **Precaución al interpretarlo** |
 | --- | --- | --- |
 | ¿Se mantiene el contenido crítico? | Porcentaje con revisión vigente. | Definir qué significa revisar y qué piezas son críticas. |
 | ¿Se corrigen errores a tiempo? | Tiempo entre detección y corrección publicada. | Distinguir gravedad y complejidad. |
@@ -16,57 +16,57 @@ Antes de medir hay que formular una pregunta. «¿Se entiende la nueva guía?» 
 | ¿Dónde se atasca el trabajo? | Tiempo en cada estado editorial. | Analizar carga y dependencias. |
 | ¿Qué problemas se repiten? | Incidencias por tipo de contenido. | No penalizar a quien detecta y comunica errores. |
 
-Los datos necesitan responsables y reglas de calidad. Un informe que mezcla periodos o cuenta varias veces la misma operación puede orientar mal las decisiones.
+Las medidas deben calcularse con reglas conocidas. Si un informe cuenta visitas de una semana y otro de un mes, sus totales no son directamente comparables. También hay que evitar contar varias veces una misma operación cuando el indicador pretende medir operaciones distintas.
 
 ## Un ejemplo numérico
 
-Supongamos que un portal tiene **120 fichas activas** y **90** han pasado la revisión prevista. La cobertura de revisión es **90 / 120 × 100 = 75 %**. El indicador no demuestra que el 75 % sea correcto en cualquier momento; demuestra que esas fichas cumplen el criterio de revisión definido.
+Supongamos que un portal tiene **120 fichas activas** y que **90** tienen al día la revisión prevista. El porcentaje es **90 / 120 × 100 = 75 %**. Esto permite identificar cuánto trabajo de revisión se ha completado. No garantiza que todas esas fichas sigan siendo correctas, porque la información puede cambiar después de revisarlas.
 
-En una tienda, si de **200 sesiones elegibles**, **8 sesiones** incluyen al menos una compra, la proporción de sesiones con compra es **8 / 200 × 100 = 4 %**. Si se contaran ocho pedidos, podría tratarse de otra métrica: una sesión puede incluir más de uno. El numerador debe corresponder a la definición.
+En una tienda, una **sesión** agrupa las interacciones de una visita según las reglas de la herramienta de medición. Si se analizan **200 sesiones** y en **8** se realiza al menos una compra, la proporción de sesiones con compra es **8 / 200 × 100 = 4 %**. No se deben sustituir las ocho sesiones por ocho pedidos sin comprobarlo, porque una sesión puede contener más de un pedido.
 
 Los ejemplos son ficticios. Ningún porcentaje sirve por sí solo como umbral universal de calidad.
 
 ## Interpretar antes de atribuir causas
 
-Si una ficha recibe menos visitas tras una actualización, puede haber cambiado la demanda, una campaña o la medición. Si mejora la conversión después de cambiar fotografías y precio al mismo tiempo, no se puede atribuir todo el efecto a las imágenes.
+Que dos cambios ocurran cerca en el tiempo no demuestra que uno cause el otro. Una página puede recibir menos visitas después de corregirse porque terminó una campaña que llevaba público hasta ella. Si una tienda cambia a la vez las fotografías y el precio y después aumentan las compras, esos datos no permiten atribuir toda la mejora a las imágenes.
 
-Las observaciones, consultas de soporte y pruebas con usuarios ayudan a interpretar cifras. Una prueba comparativa necesita diseño adecuado y tamaño suficiente para sostener sus conclusiones. Acumular números no elimina la incertidumbre.
+Las cifras pueden interpretarse mejor junto con observaciones y consultas al equipo de atención. Por ejemplo, las preguntas repetidas sobre un plazo pueden revelar que no se encuentra bien en la página. Si se comparan versiones de una página, la prueba debe planificarse de manera que permita distinguir sus efectos de otros cambios.
 
-La mejora puede actuar sobre contenido, modelo, navegación, formulario o proceso editorial. No todo problema exige cambiar de CMS.
+La mejora debe responder al problema observado. Si el plazo está oculto, puede bastar con cambiar la presentación. Si se introduce como texto libre y se necesita ordenar por fecha, puede ser necesario modificar el modelo. Si las revisiones se retrasan, quizá haya que ajustar la organización del trabajo.
 
 ## Cuándo aparece una migración
 
-Una **migración de contenidos** traslada información a otro modelo, sistema o estructura. Puede ocurrir al sustituir el CMS, consolidar varios portales o reorganizar tipos y campos. Copiar archivos es solo una parte.
+Una **migración de contenidos** traslada información a otro sistema o a una estructura diferente. Puede ser necesaria al cambiar de CMS o al reunir varios portales. Además de mover textos y archivos, hay que decidir cómo se conservarán sus relaciones, permisos y estados. Por ejemplo, las traducciones de una noticia deben seguir vinculadas después del traslado.
 
-El trabajo empieza con inventario y auditoría. Conviene decidir qué se conserva, actualiza, fusiona o retira antes de transportar todos los problemas al destino. También hay que identificar relaciones, archivos, idiomas, estados, permisos y URLs.
+Antes de migrar conviene inventariar y revisar lo que existe. Algunas páginas deben conservarse, otras necesitan corregirse y otras pueden reunirse o retirarse. También hay que localizar sus archivos, traducciones y enlaces. Así se sabe qué debe llegar al nuevo sistema y se evita trasladar sin revisión contenidos duplicados o antiguos.
 
 ## Mapeo y transformación
 
-Un **mapeo** expresa qué elemento de origen corresponde a cuál del destino. «Descripción» puede dividirse en resumen, cuerpo y requisitos. Una categoría libre puede convertirse en un término controlado. Algunas transformaciones requieren decisión humana.
+El **mapeo** establece la correspondencia entre los campos del sistema antiguo y los del nuevo. Por ejemplo, el campo "Descripción" puede pasar al campo "Texto principal". Si el nuevo sistema separa resumen, requisitos y explicación, habrá que repartir el texto anterior entre esos campos. Algunas decisiones pueden automatizarse y otras requieren leer y revisar el contenido.
 
-| Elemento de origen | Decisión de migración |
+| **Elemento de origen** | **Decisión de migración** |
 | --- | --- |
 | Identificador | Conservarlo o mantener una equivalencia estable. |
-| Campo de texto con fechas | Extraer y validar; revisar casos ambiguos. |
-| Autoría y responsable | Distinguir funciones y reasignar cuentas inexistentes. |
+| Campo de texto con fechas | Extraer las fechas, comprobarlas y revisar los casos ambiguos. |
+| Autoría y responsable | Conservar la autoría y asignar responsables actuales. |
 | Imágenes y documentos | Transferir archivos y metadatos, conservando relaciones. |
 | Traducciones | Mantener su vínculo y estado de actualización. |
-| URL anterior | Establecer destino o respuesta de retirada apropiada. |
+| URL anterior | Definir la nueva dirección o cómo informar de la retirada. |
 
 La política debe especificar qué historial se conserva. Exportar solo la última versión puede ser aceptable en un caso y perder evidencia necesaria en otro. La decisión debe conocerse antes de cambiar el sistema.
 
 ## Validación y cambio de servicio
 
-Una migración se comprueba con recuentos y con casos representativos: piezas con varios idiomas, archivos, caracteres especiales, relaciones múltiples y acceso restringido. Igualar el número total de registros no demuestra que su contenido sea correcto.
+La comprobación debe incluir cantidades y ejemplos concretos. Se pueden revisar fichas con varios idiomas, documentos adjuntos y acceso restringido. También conviene comprobar que las imágenes se ven y las relaciones siguen apuntando a los registros correctos. Importar el mismo número de fichas no demuestra que todos sus datos se hayan conservado.
 
 También se revisan redirecciones, enlaces, búsqueda, permisos y navegación. Una pieza privada en origen no debe aparecer pública por usar el valor predeterminado del destino.
 
-El cambio necesita decidir qué ocurre con modificaciones realizadas durante la migración. Puede haber una ventana de congelación o una sincronización de cambios pendientes. Debe existir una forma de revertir o corregir el proceso si los criterios de aceptación no se cumplen.
+Hay que decidir qué ocurre con los cambios realizados mientras se trasladan los contenidos. Una opción es detener temporalmente la edición durante un periodo acordado. Otra es recoger las modificaciones posteriores a la copia inicial y aplicarlas al destino. También debe prepararse cómo corregir el traslado o volver al sistema anterior si las comprobaciones fallan.
 
 ## Comprueba la comprensión
 
-**¿Mil páginas importadas prueban una migración correcta?** No. Hay que comprobar significado, relaciones, permisos, archivos y comportamiento.
+**¿Mil páginas importadas prueban una migración correcta?** No. El recuento es solo una comprobación. Hay que revisar que los textos, archivos, traducciones, enlaces y permisos se hayan conservado correctamente.
 
 **¿Una caída de visitas indica que el contenido ha empeorado?** No necesariamente. Hay que formular y contrastar explicaciones alternativas.
 
-**¿Por qué definir la salida al elegir un CMS?** Porque conocer formatos y dependencias permite conservar opciones futuras y estimar el coste real de cambiar.
+**¿Por qué estudiar cómo salir de un CMS antes de elegirlo?** Porque permite comprobar qué datos pueden recuperarse y cuánto trabajo exigiría trasladarlos. Esto ayuda a evitar una dependencia que solo se descubra cuando cambiar sea urgente.

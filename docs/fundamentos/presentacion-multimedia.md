@@ -1,36 +1,36 @@
 # 10. Presentación, edición y activos multimedia
 
-## La plantilla interpreta el modelo
+## Cómo se presenta el contenido
 
-Una **plantilla** establece cómo se presenta un tipo de contenido o una vista. Un **tema** suele reunir plantillas, estilos y otros recursos de presentación. Un **componente** representa una unidad reutilizable de interfaz, como una tarjeta de evento o un aviso.
+Una **plantilla** decide cómo mostrar los datos de una ficha. Por ejemplo, puede colocar el título de una actividad sobre su fotografía y la fecha junto al lugar. Un **tema** reúne habitualmente plantillas y estilos que dan una apariencia común al sitio. Un **componente** es un elemento de presentación que puede reutilizarse, como una tarjeta con el título y la fecha de una actividad.
 
-Una misma ficha puede mostrarse completa, resumida en un listado o adaptada a una pantalla pequeña. El contenido mantiene su identidad; cambia la representación. Esto requiere que las vistas conozcan qué campos utilizar y cómo tratarlos.
+Una misma actividad puede mostrarse completa en su página y resumida en el calendario. Ambas presentaciones utilizan el mismo registro, pero seleccionan campos distintos. El calendario puede mostrar solo el título y la fecha, mientras que la página completa incluye también la descripción y los requisitos de inscripción.
 
 El diseño no es un adorno posterior. Una plantilla que oculta el plazo de una convocatoria puede impedir completar una tarea aunque el dato esté correctamente almacenado. Por eso se deben revisar contenido y presentación conjuntamente.
 
 ## Editores visuales y edición por bloques
 
-Un editor **WYSIWYG** intenta mostrar una apariencia próxima al resultado final. Los editores por bloques permiten componer una pieza mediante unidades como párrafos, imágenes, citas y destacados. Ambas aproximaciones pueden facilitar la edición, pero sus capacidades dependen del CMS.
+Un editor **WYSIWYG**, abreviatura de What You See Is What You Get, intenta mostrar durante la edición una apariencia próxima al resultado final. La expresión significa "Lo que ves es lo que obtienes". Un editor por bloques permite añadir elementos como párrafos, imágenes o citas y ordenarlos dentro de la página. Las opciones concretas dependen de la herramienta utilizada.
 
-La vista de edición no siempre reproduce la web final. Pueden cambiar anchura, fuentes, estilos, permisos o datos relacionados. La previsualización debe comprobar las vistas reales y, si hay varios canales, las representaciones relevantes.
+La pantalla de edición puede diferir de la página que verá el público. Por ejemplo, una imagen puede ocupar otro ancho y un título puede partirse en más líneas en un móvil. Antes de publicar, conviene utilizar la vista previa y comprobar las presentaciones que realmente se van a utilizar.
 
 Dar libertad para escoger cualquier color, tamaño y disposición tiene consecuencias. El equipo puede producir páginas inconsistentes y poco accesibles. Ofrecer componentes con usos claros permite conservar flexibilidad sin obligar a cada persona a diseñar desde cero.
 
 ## Semántica frente a apariencia
 
-Un encabezado identifica una sección, no simplemente un texto grande. Una lista expresa elementos relacionados, no líneas separadas con guiones improvisados. Una tabla representa relaciones entre filas y columnas; no debería utilizarse solo para colocar bloques visualmente.
+Los elementos del documento deben indicar qué función cumple cada parte. Un **encabezado** identifica el comienzo de una sección. Una **lista** agrupa elementos relacionados. Una **tabla** permite comparar datos organizados en filas y columnas. Utilizarlos correctamente ayuda a conservar una estructura comprensible, además de dar formato al texto.
 
-Esta semántica ayuda a lectores, tecnologías de apoyo y procesos de reutilización. Si un texto se marca como título únicamente porque se desea una fuente mayor, la estructura del documento puede resultar confusa.
+Esa estructura también puede ser interpretada por herramientas de apoyo. Por ejemplo, un lector de pantalla puede permitir saltar entre encabezados. Aumentar el tamaño de una frase sin marcarla como encabezado cambia su aspecto, pero no comunica que empieza una sección. Del mismo modo, marcar una frase cualquiera como encabezado puede introducir una sección que no existe.
 
-**Ejemplo.** Una ficha tiene «Requisitos», «Plazo» y «Solicitud». Esos apartados deben ser encabezados coherentes. El nombre de un botón no necesita convertirse en encabezado para destacar. El componente correspondiente debe resolver su aspecto y función.
+**Ejemplo.** Una ficha de un trámite puede tener los apartados "Requisitos", "Plazo" y "Solicitud". Los tres deben utilizar el nivel de encabezado que corresponda. Un botón para enviar la solicitud debe seguir siendo un botón, aunque se quiera destacar visualmente.
 
 ## Qué es un activo digital
 
-Un **activo digital** es un recurso reutilizable con valor para la organización: una fotografía, un logotipo, un vídeo o un documento. Gestionarlo implica conocer archivo, descripción, procedencia, derechos, versiones y lugares donde se utiliza.
+Un **activo digital** es un recurso que la organización conserva y utiliza, como una fotografía, un logotipo, un vídeo o un documento. Gestionarlo implica saber qué contiene, de dónde procede, quién puede utilizarlo y en qué páginas aparece. Así se puede localizar, reutilizar y sustituir de forma controlada.
 
-Una biblioteca multimedia no debería funcionar como un cajón de archivos anónimos. «IMG_8742_final_2.jpg» no explica qué representa la imagen ni si puede publicarse. Un identificador estable, un nombre comprensible y metadatos adecuados permiten mantenerla.
+Una biblioteca multimedia no debería funcionar como un cajón de archivos anónimos. "IMG\_8742\_final\_2.jpg" no explica qué representa la imagen ni si puede publicarse. Un identificador estable, un nombre comprensible y metadatos adecuados permiten mantenerla.
 
-| Información del activo | Por qué importa |
+| **Información del activo** | **Por qué importa** |
 | --- | --- |
 | Descripción y tema | Localizarlo sin depender del nombre técnico. |
 | Autoría y derechos | Conocer condiciones de publicación y atribución. |
@@ -41,23 +41,23 @@ Una biblioteca multimedia no debería funcionar como un cajón de archivos anón
 
 ## Originales y derivados
 
-El **original** es la fuente que se conserva para futuras transformaciones. Un **derivado** puede ser una miniatura, un recorte o una versión comprimida. Disponer de varios tamaños permite servir un archivo adecuado al contexto, reduciendo transferencia innecesaria.
+El **original** es el archivo de partida que se conserva. Un **derivado** es una versión obtenida a partir de él, como una miniatura o una imagen recortada. Por ejemplo, el CMS puede mostrar una miniatura en un listado y una fotografía mayor en la ficha del producto. Esto evita descargar un archivo muy grande cuando solo hace falta una imagen pequeña.
 
-Un derivado no recupera detalle que no existe en el original. Ampliar una fotografía pequeña no equivale a disponer de una imagen de mayor calidad. Además, un recorte automático puede cortar información importante; debe comprobarse el punto de interés y la vista donde aparece.
+Ampliar una imagen pequeña no recupera los detalles que no estaban en el original. También hay que comprobar los recortes automáticos. Por ejemplo, una miniatura cuadrada podría dejar fuera una parte importante de la camiseta o cortar el rostro de una persona.
 
-Sustituir un archivo compartido puede modificar muchas páginas. Conviene distinguir una corrección del mismo activo de la incorporación de otro distinto. La decisión afecta a las referencias y al historial.
+Si varias páginas utilizan la misma fotografía, sustituir su archivo puede cambiar todas ellas. Antes de hacerlo hay que decidir si se está corrigiendo esa fotografía o incorporando otra distinta. En el segundo caso puede ser más adecuado crear un nuevo recurso y cambiar solo las páginas que deban utilizarlo.
 
 ## Texto alternativo y contexto
 
-El texto alternativo comunica la función o información de una imagen cuando esta no se percibe visualmente. Debe responder al uso de la imagen, no ser siempre una descripción exhaustiva del archivo.
+El **texto alternativo** comunica la información o la función de una imagen a quien no puede verla. Por ejemplo, en la ficha de una camiseta puede indicar el color y un detalle relevante de su diseño. Debe aportar lo necesario para comprender su uso en esa página, sin describir todos los elementos del archivo de forma indiscriminada.
 
-En la [guía de imágenes de W3C WAI](https://www.w3.org/WAI/tutorials/images/) se distinguen imágenes informativas, decorativas, funcionales y complejas. Una imagen decorativa puede necesitar alternativa vacía; una imagen que actúa como enlace necesita comunicar su función; un gráfico complejo puede requerir explicación adicional.
+La [guía de imágenes de W3C WAI](https://www.w3.org/WAI/tutorials/images/) explica cómo adaptar el texto alternativo al uso de cada imagen. Una imagen puramente decorativa puede tener una alternativa vacía para que las herramientas de lectura la omitan. Si la imagen es un enlace, la alternativa debe comunicar su destino o función. Un gráfico complejo puede necesitar además una explicación en el texto de la página.
 
-En Costa Sur, una foto informativa de la camiseta puede destacar el color y el detalle visible. En una cabecera puramente decorativa, repetir esa descripción puede añadir ruido. Por ello, un único texto alternativo global por archivo no siempre basta: el CMS debe permitir tratar el contexto de uso cuando sea necesario.
+La misma fotografía puede cumplir funciones distintas. En una ficha de Costa Sur, puede mostrar cómo es la camiseta. En una cabecera decorativa, puede servir solo de fondo. Por eso, el CMS puede necesitar permitir un texto alternativo diferente según dónde se utilice la imagen, en lugar de obligar a usar siempre una única descripción.
 
 ## Vídeo, audio y documentos
 
-Un vídeo necesita considerar subtítulos, transcripción y la información visual que no aparece en el audio. Una grabación no sustituye automáticamente una explicación textual localizable. También hay que revisar la accesibilidad del reproductor y de los controles.
+En un vídeo hay que considerar tanto el sonido como la información visual. Los subtítulos permiten leer lo que se dice y los sonidos relevantes. Una transcripción ofrece el contenido en forma de texto. Si se muestra una acción importante sin describirla en el audio, también hay que proporcionar una forma de comprenderla. Los controles del reproductor deben poder utilizarse de manera accesible.
 
 Los documentos descargables tienen título, idioma, estructura y versiones. Publicar un PDF no exime de mantener el contenido. Si la información principal puede ofrecerse de forma clara en HTML, se facilita su lectura en distintas pantallas y su actualización.
 

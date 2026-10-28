@@ -46,3 +46,8 @@ body,.wy-body-for-nav { background:#f1f5f7; font-family:system-ui,-apple-system,
 .rst-content p { overflow-wrap:break-word; }
 .wy-menu-vertical .toctree-l2>a { padding-top:.45rem; padding-bottom:.45rem; }
 @media print { .rst-content h2,.rst-content h3 { break-after:avoid; } .rst-content table,.rst-content img { break-inside:avoid; } }
+
+/* Diagramas extraídos del Word y lectura en pantallas pequeñas. */
+.rst-content img { display:block; width:100%; max-width:700px; height:auto; margin:1.5rem auto; }
+.rst-content h1,.rst-content h2,.rst-content h3 { scroll-margin-top:1.5rem; }
+.rst-content a { overflow-wrap:anywhere; }

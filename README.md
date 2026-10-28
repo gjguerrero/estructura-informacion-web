@@ -1,54 +1,49 @@
-# Estructura de la Información Web — Fundamentos de CMS
+# Apuntes de fundamentos de CMS
 
-Apuntes del Máster Oficial en Gestión y Tecnologías de Procesos de Negocio (Universidad de Cádiz). Edición ampliada del 28 de octubre de 2026.
+**Estructuración y Acceso a la Información en la Web y Gestión de Contenidos**
 
-El sitio contiene una presentación y **22 capítulos de fundamentos**. Se han retirado preparación del equipo, prácticas, consulta y descarga de la guía técnica. Los capítulos explican desde cero contenido, metadatos, modelado, historia, roles, permisos, revisión, arquitecturas, calidad, mantenimiento, gobernanza y aplicaciones al comercio electrónico.
+Máster Oficial en Gestión y Tecnologías de Procesos de Negocio · Universidad de Granada
 
-## Actualizar el repositorio que ya tienes
+**Gabriel Guerrero Contreras**  
+Departamento de Ingeniería Informática · Universidad de Cádiz
 
-1. Extrae el ZIP. Entra en la carpeta `estructura-informacion-web`.
-2. Copia **su contenido** en la raíz de tu repositorio actual, donde ya está `mkdocs.yml`, sustituyendo los archivos del mismo nombre. No crees una carpeta adicional dentro del repositorio ni subas el ZIP como único archivo.
-3. Incluye `mkdocs.yml`, `requirements.txt`, `README.md`, la carpeta `docs` y `.github/workflows/pages.yml`. La carpeta `.github` puede aparecer oculta; ya existía en el paquete anterior y mantiene la publicación con Actions.
-4. Confirma los cambios en `main` y comprueba la ejecución **Publicar apuntes** en la pestaña **Actions**.
-5. Abre la dirección de Pages que ya utilizas. No necesitas crear otro repositorio ni cambiar esa dirección.
+Este paquete contiene los apuntes en Markdown y la configuración para publicarlos con MkDocs en GitHub Pages. El contenido procede del último Word revisado por el autor. Incluye sus 21 capítulos y un capítulo 22 de bibliografía recomendada.
 
-Si subes desde la web de GitHub, utiliza **Add file → Upload files** en la raíz y arrastra los archivos y carpetas extraídos. Comprueba que `mkdocs.yml` se ha sustituido: es lo que cambia el menú y excluye el material anterior. El flujo de Actions incluido debe quedar en su ruta exacta, no como un archivo suelto en la raíz.
+## Actualizar tu repositorio
 
-### Qué ocurre con los archivos antiguos
+1. Descomprime el ZIP y abre la carpeta `estructura-informacion-web`.
+2. Copia **el contenido de esa carpeta** en la raíz del repositorio que ya utilizas. Sustituye los archivos del mismo nombre. `mkdocs.yml` debe quedar en la raíz, junto a `requirements.txt`, `README.md`, `docs` y `.github`.
+3. Comprueba que el archivo de publicación queda en `.github/workflows/pages.yml`. La carpeta `.github` puede estar oculta en el explorador de archivos.
+4. Guarda los cambios en la rama `main`. El flujo **Publicar apuntes** construirá y publicará el sitio. Puedes ver su resultado en la pestaña **Actions**.
+5. Abre la dirección habitual de GitHub Pages cuando termine la ejecución.
 
-La nueva configuración excluye expresamente `docs/preparacion/`, `docs/prestashop/`, `docs/descargas/`, `docs/recursos.md` y el JavaScript de la antigua guía. **Aunque esos archivos permanezcan en el repositorio al subir los nuevos, no se incorporan al sitio generado ni al buscador.** También puedes eliminarlos del repositorio para dejarlo ordenado.
+Si subes los archivos desde la web de GitHub, utiliza **Add file → Upload files** en la raíz del repositorio y arrastra los archivos y carpetas extraídos. Subir únicamente el ZIP no actualiza las páginas. En **Settings → Pages → Build and deployment → Source** debe estar seleccionado **GitHub Actions**.
 
-Esta exclusión afecta a la nueva publicación de Pages. No elimina archivos del historial de Git ni copias externas, y un repositorio público puede seguir mostrando los archivos antiguos si no los borras. El paquete nuevo no los contiene.
+Si tu rama principal tiene otro nombre, sustituye `main` por ese nombre en las dos entradas `branches` de `.github/workflows/pages.yml`.
 
-Si trabajas con una copia local de Git, después de sustituir los archivos:
+## Qué contiene esta edición
 
-```bash
-git add -A
-git commit -m "Ampliar fundamentos de CMS y retirar las guías de prácticas"
-git push
-```
+El texto de los capítulos se conserva, incluidas las tablas, los diagramas y los enlaces. Se ha adaptado el formato de Word a Markdown y los enlaces internos se han conectado con las páginas correspondientes.
 
-No se ha efectuado ninguna publicación remota desde este paquete: el despliegue se produce en tu repositorio al confirmar los cambios.
+El Word adjunto termina en el capítulo 21. Su índice todavía mencionaba un capítulo 22 de caso integrador que ya no figuraba en el cuerpo del documento. Esa entrada se ha sustituido por la bibliografía y el recorrido inicial se ha ajustado a los capítulos existentes.
 
-## Estructura
+El sitio publica únicamente los fundamentos y su bibliografía. La configuración excluye las antiguas carpetas de preparación, prácticas y descargas, el archivo de consulta y el caso integrador de versiones anteriores. Esos archivos quedan fuera del sitio y del buscador aunque todavía estén en el repositorio. Puedes borrarlos del repositorio si quieres retirarlos también de la lista de archivos.
 
 | Ruta | Contenido |
 | --- | --- |
-| `docs/index.md` | Presentación y recorrido completo. |
-| `docs/fundamentos/` | Los 22 capítulos conceptuales. |
-| `docs/assets/diagrams/` | Diagramas SVG del flujo editorial y las arquitecturas. |
-| `docs/assets/stylesheets/uca.css` | Estilo de lectura y adaptación a pantallas pequeñas. |
-| `mkdocs.yml` | Navegación, búsqueda, exclusiones y comprobación de enlaces. |
-| `.github/workflows/pages.yml` | Construcción y despliegue en GitHub Pages. |
-| `requirements.txt` | Versión de MkDocs utilizada. |
+| `docs/index.md` | Presentación e índice. |
+| `docs/fundamentos/` | Los 21 capítulos del Word y la bibliografía. |
+| `docs/assets/diagrams/` | Los dos diagramas del documento. |
+| `docs/assets/stylesheets/uca.css` | Estilo de lectura para ordenador y móvil. |
+| `mkdocs.yml` | Menú, búsqueda y configuración del sitio. |
+| `.github/workflows/pages.yml` | Construcción y publicación automática. |
+| `requirements.txt` | Dependencias para generar las páginas. |
 
-Las rutas de los cuatro capítulos originales (`web`, `cms`, `comercio-electronico` y `catalogo`) se conservan, con contenido ampliado. Las referencias oficiales están dentro de cada capítulo. Los ejemplos y matrices son didácticos; no deben confundirse con permisos predeterminados de un producto.
+## Editar y comprobar en tu equipo
 
-## Edición y comprobación local opcional
+La publicación desde GitHub no requiere ejecutar estos comandos. Para trabajar con vista previa local, utiliza Python 3.12 y abre una terminal en la carpeta del proyecto.
 
-Para publicar desde GitHub no necesitas ejecutar estos pasos. Si quieres editar con vista previa, usa Python 3.12 y un entorno virtual.
-
-En PowerShell, desde la raíz del proyecto:
+En Windows con PowerShell puedes ejecutar lo siguiente.
 
 ```powershell
 py -3.12 -m venv .venv
@@ -56,27 +51,16 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m mkdocs serve
 ```
 
-Abre `http://127.0.0.1:8000/`. Para comprobar la construcción:
-
-```powershell
-.\.venv\Scripts\python.exe -m mkdocs build --strict
-```
-
-En Linux o macOS, los equivalentes son:
+En Linux o macOS puedes utilizar estos comandos.
 
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python -m mkdocs serve
-.venv/bin/python -m mkdocs build --strict
 ```
 
-Los contenidos se editan en Markdown dentro de `docs/fundamentos/`. El menú está en `mkdocs.yml`. La carpeta `site/` se genera al construir y no se incluye en el paquete ni se necesita subir al repositorio.
+La vista previa se abre en `http://127.0.0.1:8000/`. Para comprobar los archivos antes de publicarlos, ejecuta `python -m mkdocs build --strict` con el Python del entorno virtual.
 
-## Configuración de Pages
+La carpeta `site` se genera durante la construcción. No es necesario subirla al repositorio. GitHub Actions obtiene la dirección del proyecto automáticamente y genera las páginas para esa dirección.
 
-El proyecto conserva el flujo de publicación automática en `main` y la comprobación de pull requests. En **Settings → Pages → Build and deployment → Source** debe estar seleccionado **GitHub Actions**, como en la configuración anterior.
-
-La dirección se obtiene de GitHub Pages durante la construcción. No es necesario escribir tu usuario en los archivos. La compilación local comprueba el proyecto, pero no los permisos o la configuración de tu cuenta de GitHub.
-
-Documentación de referencia: [MkDocs](https://www.mkdocs.org/user-guide/configuration/) y [flujos personalizados de GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+Puedes consultar la [configuración de MkDocs](https://www.mkdocs.org/user-guide/configuration/) y la [documentación de publicación con GitHub Actions](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).

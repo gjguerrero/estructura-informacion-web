@@ -1,6 +1,6 @@
-site_name: Estructura de la Información Web
-site_description: Fundamentos de los sistemas de gestión de contenidos (CMS). MGTPN, Universidad de Cádiz.
-site_author: Gabriel Guerrero
+site_name: Fundamentos de CMS
+site_description: Estructuración y Acceso a la Información en la Web y Gestión de Contenidos. Máster Oficial en Gestión y Tecnologías de Procesos de Negocio, Universidad de Granada.
+site_author: Gabriel Guerrero Contreras
 site_url: !ENV [SITE_URL, 'http://127.0.0.1:8000/']
 use_directory_urls: true
 # No publicar las secciones de la versión anterior, aunque aún queden en el repositorio.
@@ -10,6 +10,9 @@ exclude_docs: |
   /descargas/
   /recursos.md
   /assets/javascripts/guide.js
+  /fundamentos/caso-integrador.md
+  /assets/diagrams/flujo-editorial.svg
+  /assets/diagrams/arquitecturas.svg
 theme:
   name: readthedocs
   locale: es
@@ -63,4 +66,4 @@ nav:
       - 19. Comercio electrónico: fundamentos/comercio-electronico.md
       - 20. Catálogo y variantes: fundamentos/catalogo.md
       - 21. Evaluación y migración: fundamentos/evaluacion-migracion.md
-      - 22. Caso integrador: fundamentos/caso-integrador.md
+      - 22. Bibliografía recomendada: fundamentos/bibliografia.md

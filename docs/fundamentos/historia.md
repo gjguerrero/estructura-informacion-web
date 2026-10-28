@@ -1,71 +1,65 @@
 # 3. Historia y evolución de los CMS
 
-## Por qué estudiar su historia
-
-Las herramientas de gestión de contenidos responden a problemas que fueron apareciendo al crecer la web: publicar con frecuencia, permitir la participación de varias personas, separar diseño y datos, reutilizar información y controlar cambios. Conocer esa evolución permite entender por qué conviven sistemas tan diferentes.
-
-No hay una frontera universal que marque el nacimiento de «el primer CMS». La gestión documental y la publicación electrónica tienen antecedentes anteriores a la web. Además, herramientas empresariales, sistemas de noticias, comunidades y blogs siguieron trayectorias distintas. El recorrido siguiente es una síntesis didáctica de necesidades, no una clasificación cerrada de generaciones.
-
 ## De la web inicial a la publicación repetitiva
 
-Tim Berners-Lee propuso la web en el CERN en **1989**. El **30 de abril de 1993**, el CERN puso su software de la web en el dominio público, un hito que favoreció su difusión. Estas fechas corresponden a la web, no al nacimiento de los CMS. Véase la [historia del CERN](https://home.cern/science/computing/the-birth-of-the-web).
+Tim Berners-Lee propuso la web en el CERN en **1989**. El **30 de abril de 1993**, el CERN puso su software de la web en el dominio público, un hito que favoreció su difusión.
 
 Mantener documentos enlazados era suficiente para ciertos sitios pequeños. Al crecer una publicación, sin embargo, repetir una cabecera, actualizar menús y corregir el mismo dato en varias páginas suponía trabajo y riesgo. Apareció la necesidad de generar páginas a partir de estructuras compartidas y de almacenar información separada del diseño.
 
-**Ejemplo retrospectivo.** Un departamento publica diez documentos. Si cambia su teléfono, puede corregirlos manualmente. Con mil páginas y veinte editores, la misma estrategia deja de ser razonable. El problema no es solo escribir HTML: es coordinar modificaciones y evitar contradicciones.
+**Ejemplo retrospectivo.** Un departamento publica diez documentos. Si cambia su teléfono, puede corregirlos manualmente. Con mil páginas y veinte editores, la misma estrategia deja de ser razonable. El problema no es solo escribir HTML, es coordinar modificaciones y evitar contradicciones.
 
 ## Bases de datos, plantillas y equipos editoriales
 
 La publicación mediante aplicaciones y bases de datos permitió guardar noticias o productos como registros y mostrarlos con plantillas. Una corrección en un registro podía reflejarse en distintas vistas. Los formularios hicieron posible que más personas participaran sin editar directamente los archivos que componían el sitio.
 
-En paralelo, las organizaciones necesitaron permisos, aprobaciones y control de versiones. La pregunta pasó de «¿cómo subimos una página?» a «¿cómo mantenemos miles de piezas con responsables y criterios comunes?». Los sistemas empresariales incorporaron respuestas a estos problemas con diferentes alcances y costes.
-
-Esta evolución no eliminó la edición manual ni la gestión por archivos. Las opciones se acumularon. Todavía resulta sensato mantener ciertos contenidos como archivos de texto si su equipo y sus necesidades lo permiten.
+En paralelo, las organizaciones necesitaron permisos, aprobaciones y control de versiones. La pregunta pasó de “¿cómo subimos una página?” a “¿cómo mantenemos miles de piezas con responsables y criterios comunes?”.
 
 ## Comunidades, blogs y proyectos de código abierto
 
 Tres hitos permiten situar proyectos conocidos sin afirmar que fueran los primeros de su categoría:
 
-| Fecha | Hito documentado | Qué ayuda a comprender |
+| **Fecha** | **Hito documentado** | **Qué ayuda a comprender** |
 | --- | --- | --- |
 | Enero de 2001 | Publicación del software que dio origen a Drupal. | La gestión de comunidades y publicaciones como punto de partida. |
 | 2003 | Primera versión de WordPress, derivada de b2/cafelog. | La publicación personal como base para un ecosistema más amplio. |
 | Septiembre de 2005 | Primera versión de Joomla. | La continuidad y reorganización de comunidades de desarrollo. |
 
-Las fechas proceden de la [historia de Drupal](https://www.drupal.org/about/history), la [historia de WordPress](https://wordpress.org/about/history/) y el [archivo oficial de Joomla 1.0.0](https://downloads.joomla.org/cms/joomla10/1-0-0).
-
 Los temas y las extensiones favorecieron ecosistemas en los que distintas personas podían aportar diseño y funciones. Esto amplió las posibilidades de adaptación y también las dependencias: instalar componentes de varios proveedores exige coordinar compatibilidad y mantenimiento.
 
-## De «una web» a varios canales
+## De “una web” a varios canales
 
 Cuando una organización quiere publicar la misma información en una web, una aplicación móvil, un boletín y una pantalla informativa, copiar y pegar resulta cada vez menos sostenible. El contenido estructurado y las interfaces de programación permiten distribuir información hacia distintas presentaciones.
 
-El término **headless** describe sistemas que separan la gestión de contenidos de la capa encargada de presentarlos al público. No significa que carezcan de interfaz editorial. Tampoco convierte cualquier contenido en reutilizable: si todo está guardado como un gran bloque de HTML pensado para una pantalla, una API solo transporta ese problema a otro canal.
+El término **headless** describe sistemas que separan la gestión de contenidos de la capa encargada de presentarlos al público. No significa que carezcan de interfaz editorial. Tampoco convierte cualquier contenido en reutilizable, si todo está guardado como un gran bloque de HTML pensado para una pantalla, una API solo transporta ese problema a otro canal.
 
-El [capítulo de arquitecturas](arquitecturas.md) compara este enfoque con los CMS integrados y la generación estática. No se trata de que una opción sustituya necesariamente a todas las demás.
+El [capítulo de arquitecturas](arquitecturas.md#11-arquitecturas-de-cms-y-formas-de-publicacion) compara este enfoque con los CMS integrados y la generación estática.
 
 ## Servicios gestionados y especialización
 
-Otra línea de evolución es la contratación del CMS como servicio. Un proveedor puede gestionar parte de la infraestructura y las actualizaciones. La organización conserva decisiones sobre contenido, usuarios, configuración y condiciones de uso. «Está en la nube» no significa «no necesita mantenimiento organizativo».
+Una organización puede contratar un CMS que un proveedor aloja y mantiene. Por ejemplo, una tienda puede utilizar una plataforma a la que su personal accede desde el navegador para añadir productos y gestionar contenidos. El proveedor puede encargarse de mantener los servidores e instalar las actualizaciones. Las tareas técnicas incluidas dependen del servicio contratado.
 
-También se consolidan herramientas especializadas: comercio electrónico, aprendizaje, activos digitales o información de productos. Pueden compartir conceptos —usuarios, registros, permisos—, pero sus entidades y procesos principales son distintos.
+La tienda sigue siendo responsable de la información que publica y de cómo trabaja su equipo. Debe comprobar que las descripciones y los precios sean correctos, decidir quién puede modificarlos y retirar el acceso a las personas que dejan de trabajar en ella. Contratar el mantenimiento técnico permite delegar determinadas tareas, pero sigue siendo necesario organizar y revisar el trabajo con los contenidos.
 
-Un catálogo comercial necesita variantes, precios y disponibilidad. Un portal de noticias necesita titulares, secciones y procesos de edición. Forzar ambos dominios a utilizar exactamente el mismo modelo suele producir campos ambiguos y excepciones difíciles de explicar.
+También existen herramientas especializadas en necesidades concretas. Una plataforma de comercio electrónico está preparada para trabajar con productos y pedidos. Una plataforma de aprendizaje organiza cursos, materiales y actividades del alumnado. Un gestor de archivos multimedia permite administrar fotografías, vídeos y sus derechos de uso. Aunque todas pueden utilizar cuentas, permisos y formularios, la información que gestionan y las tareas que permiten realizar son diferentes.
+
+Podemos verlo comparando una tienda con un portal de noticias. En la tienda, la ficha de una camiseta necesita datos como el precio, las tallas, los colores y las unidades disponibles. En el portal, una noticia necesita un titular, un texto, una autoría, una sección y una fecha de publicación. También cambian las tareas habituales. La tienda debe controlar qué productos pueden comprarse, mientras que el portal necesita organizar la redacción, revisión y publicación de noticias.
+
+Por eso, cada tipo de contenido necesita una estructura adecuada. Utilizar el mismo formulario para una camiseta y una noticia obligaría a incluir campos que no tienen sentido en uno de los casos. Un mismo CMS puede gestionar ambos tipos de contenido si permite definir campos y procesos apropiados para cada uno.
 
 ## Automatización e inteligencia artificial
 
-La automatización puede ayudar a sugerir etiquetas, producir borradores o detectar información incompleta. No cambia la necesidad de comprobar fuentes, derechos, coherencia y adecuación al público. Un texto fluido puede contener errores; una etiqueta sugerida puede clasificar mal una pieza.
+La **automatización** permite realizar algunas tareas sin repetirlas manualmente. Por ejemplo, una herramienta puede avisar de que falta la fecha de una actividad. La **inteligencia artificial** también puede ayudar a proponer etiquetas o preparar un borrador. El equipo debe revisar el resultado antes de utilizarlo. Una noticia bien redactada puede contener una fecha inventada y una etiqueta sugerida puede situarla en la sección equivocada.
 
-Desde el punto de vista de la gestión, importa registrar qué se ha generado o transformado, quién lo ha revisado y qué versión se publicó. La responsabilidad editorial no desaparece por introducir una herramienta automática. Esta observación es un criterio de diseño del proceso, no una afirmación sobre las funciones de todos los CMS.
+Conviene dejar constancia de qué partes se han generado o modificado con estas herramientas, quién las ha revisado y qué versión se ha publicado. Por ejemplo, si una herramienta prepara la descripción de un producto, una persona debe comprobar sus características antes de publicarla. La organización tiene que definir ese procedimiento y comprobar si el CMS permite registrarlo.
 
 ## Qué permanece a lo largo de la evolución
 
-Cambian las tecnologías, pero se repiten las preguntas: qué contenido existe, quién lo mantiene, qué significa cada dato, quién puede publicarlo y cómo sabemos que sigue vigente. Esas preguntas son el núcleo de la asignatura.
+Aunque cambien las herramientas, una organización sigue necesitando conocer sus contenidos y mantenerlos. Por ejemplo, debe saber quién responde de una convocatoria, quién puede cambiar su plazo y cuándo se comprobó por última vez que sus requisitos seguían siendo correctos. Estas decisiones forman parte de la gestión del contenido con cualquier tecnología.
 
 ## Comprueba la comprensión
 
 **¿Un CMS más reciente es necesariamente mejor?** No. Debe resolver el trabajo real y poder mantenerse con los recursos disponibles.
 
-**¿Headless es una etapa obligatoria?** No. Es una decisión de arquitectura con ventajas y costes, especialmente cuando hay varios canales.
+**¿Todos los CMS deben evolucionar hacia una arquitectura headless?** No. Separar la gestión del contenido de su presentación puede resultar útil para distribuirlo en varios canales, pero también exige mantener las aplicaciones que lo muestran. La elección depende de las necesidades y de los recursos de la organización.
 
-**¿Qué tienen en común un blog y un portal corporativo?** Ambos necesitan organizar y publicar contenidos. Sus diferencias de volumen, riesgo y colaboración determinan cuánto control adicional requieren.
+**¿Qué tienen en común un blog y un portal corporativo?** Ambos necesitan organizar, publicar y mantener contenidos. Un blog personal puede tener una sola persona responsable. Un portal con muchos departamentos puede necesitar permisos por sección y revisiones antes de publicar.
